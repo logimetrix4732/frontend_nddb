@@ -3209,7 +3209,7 @@ input.e-check-input:checked::after {
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-right: 50px;
+  margin-right: 16px !important;
 }
 .main-menu ul li:last-child {
   margin-right: 0;

@@ -64,7 +64,7 @@ const NavBar = () => {
       {/* Header top area end */}
       <div id="header-sticky" className="bd-header__area">
         <div className="container-fluid p-0">
-          <div className="row g-0 align-items-center">
+          <div className="row align-items-center">
             <div className="col-xl-2 col-lg-2 col-md-4 col-4 p-0">
               <div className="bd-header__logo">
                 <a href="index.html">
