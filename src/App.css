@@ -1,0 +1,245 @@
+/* Farm Gallery Styles */
+
+.bd-gallery__area {
+  position: relative;
+  background-color: #f9f7f0;
+  overflow: hidden;
+}
+
+.bd-gallery__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.bd-gallery__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bd-section__title-wrapper {
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.bd-sub__title {
+  display: block;
+  font-size: 16px;
+  color: #55624c;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bd-section__title {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.bd-gallery__navigatin {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  z-index: 10;
+}
+
+.bd-gallery__navigatin button {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #555;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bd-gallery__navigatin button:hover {
+  background-color: #55624c;
+  color: #fff;
+  border-color: #55624c;
+}
+
+/* Gallery items */
+.bd-gallery__item {
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.bd-gallery__image {
+  width: 100%;
+  height: 380px; /* Increased height */
+  overflow: hidden;
+}
+
+.bd-gallery__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.bd-gallery__item:hover .bd-gallery__image img {
+  transform: scale(1.1);
+}
+
+.bd-gallery__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.bd-gallery__item:hover .bd-gallery__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bd-gallery__content h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.bd-gallery__content h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bd-gallery__content p {
+  margin-bottom: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Swiper specific styles */
+.swiper-slide {
+  width: 380px !important; /* Increased width */
+  margin-right: 20px;
+}
+
+/* The last slide should be partially visible */
+.bd-gallery-active {
+  overflow: visible;
+  width: calc(100% + 190px); /* Make sure it extends past the container */
+}
+
+.bd-gallery__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add styles to ensure navigation arrows work properly */
+.gallery-button-prev,
+.gallery-button-next {
+  z-index: 15 !important;
+}
+
+/* Fix icon display */
+.fas {
+  display: inline-block;
+  font-style: normal;
+}
+
+/* Fix spacing issues */
+.p-relative {
+  position: relative;
+}
+
+.pt-120 {
+  padding-top: 100px;
+}
+
+.pb-120 {
+  padding-bottom: 100px;
+}
+
+.mb-45 {
+  margin-bottom: 45px;
+}
+
+.w-img {
+  display: block;
+}
+
+/* Make container width match design */
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 1199px) {
+  .swiper-slide {
+    width: 320px !important;
+  }
+  .bd-gallery__image {
+    height: 320px;
+  }
+}
+
+@media (max-width: 991px) {
+  .pt-120 {
+    padding-top: 80px;
+  }
+  .pb-120 {
+    padding-bottom: 80px;
+  }
+  .bd-section__title {
+    font-size: 36px;
+  }
+  .swiper-slide {
+    width: 280px !important;
+  }
+  .bd-gallery__image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pt-120 {
+    padding-top: 60px;
+  }
+  .pb-120 {
+    padding-bottom: 60px;
+  }
+  .bd-section__title {
+    font-size: 28px;
+  }
+  .bd-gallery__navigatin {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .swiper-slide {
+    width: 240px !important;
+  }
+  .bd-gallery__image {
+    height: 240px;
+  }
+}
