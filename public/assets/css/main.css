@@ -4579,9 +4579,9 @@ input.e-check-input:checked::after {
 }
 .bd-cta__input input {
   width: 100%;
-  height: 60px;
+  height: 50px !important;
   border: none;
-  padding-left: 47px;
+  padding-left: 40px !important;
   padding-right: 25px;
   color: var(--clr-common-placeholder-2);
   -webkit-border-radius: 6px;
