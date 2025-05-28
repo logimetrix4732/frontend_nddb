@@ -10,6 +10,7 @@ const Footer = () => {
         backgroundColor: "#004E1C",
         overflow: "hidden",
         height: "500px",
+        marginTop: '60px',
       }}
     >
       {/* Top Content */}

@@ -76,7 +76,7 @@
 }
 
 /* Mobile responsive fixes */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .navbarLinks {
     padding: 10px;
     flex-direction: column;
@@ -97,7 +97,7 @@
     margin-top: 10px;
     justify-content: flex-start;
   }
-}
+} */
 
 /*------------------------ Home carosule component section ------------------------ */
 .carousel-container {

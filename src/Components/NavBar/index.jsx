@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/img/logo/nddb_logo.jpg";
 
 const NavBar = () => {
   return (
@@ -68,18 +69,23 @@ const NavBar = () => {
             <div className="col-xl-2 col-lg-2 col-md-4 col-4 p-0">
               <div className="bd-header__logo">
                 <a href="index.html">
-                  <img src="assets/img/logo/logo.png" alt="logo" />
+                  <img src={logo} alt="logo" className="" style={{
+                    height: '110px',
+                    padding: '10px 10px 10px 30px',
+                    borderRadius: '38px 20px 20px 38px',
+                  }} />
+                  {/* <img src="assets/img/logo/logo.png" alt="logo" /> */}
                 </a>
               </div>
             </div>
             <div className="col-xl-8 col-lg-9 col-md-4 d-none d-md-block">
               <div className="bd-header__menu-wrapper d-flex justify-content-center">
-                <div className="main-menu d-none d-none d-lg-block">
+                <div className="main-menu d-none d-lg-block">
                   <nav id="mobile-menu">
-                    <ul>
-                      <li className="has-dropdown">
+                    <ul className="menuLinks">
+                      <li className="">
                         <a href="index.html">Home</a>
-                        <ul className="submenu">
+                        {/* <ul className="submenu">
                           <li>
                             <a href="index.html">Home Style 1</a>
                           </li>
@@ -89,7 +95,7 @@ const NavBar = () => {
                           <li>
                             <a href="index-3.html">Home Style 3</a>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
                       <li>
                         <a href="about.html">About</a>
@@ -135,20 +141,20 @@ const NavBar = () => {
                           </li>
                         </ul>
                       </li>
-                      <li className="has-dropdown">
+                      <li className="">
                         <a href="service.html">Milk Producer Org.</a>
-                        <ul className="submenu">
+                        {/* <ul className="submenu">
                           <li>
                             <a href="service.html">Service</a>
                           </li>
                           <li>
                             <a href="service-details.html">Service details</a>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
-                      <li className="has-dropdown">
+                      <li className="">
                         <a href="news.html">Semen Station</a>
-                        <ul className="submenu">
+                        {/* <ul className="submenu">
                           <li>
                             <a href="news.html">News</a>
                           </li>
@@ -164,11 +170,11 @@ const NavBar = () => {
                           <li>
                             <a href="news-layout-3.html">Grid Layout 3</a>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
-                      <li className="has-dropdown">
+                      <li className="">
                         <a href="news.html">Blogs</a>
-                        <ul className="submenu">
+                        {/* <ul className="submenu">
                           <li>
                             <a href="news.html">News</a>
                           </li>
@@ -184,9 +190,9 @@ const NavBar = () => {
                           <li>
                             <a href="news-layout-3.html">Grid Layout 3</a>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
-                      <li className="has-dropdown">
+                      {/* <li className="">
                         <a href="news.html">Tenders</a>
                         <ul className="submenu">
                           <li>
@@ -205,10 +211,30 @@ const NavBar = () => {
                             <a href="news-layout-3.html">Grid Layout 3</a>
                           </li>
                         </ul>
+                      </li> */}
+                      <li className="has-dropdown">
+                        <a >More</a>
+                        <ul className="submenu">
+                          <li>
+                            <a href="news.html">New Initiative</a>
+                          </li>
+                          <li>
+                            <a href="news-details.html">Publications</a>
+                          </li>
+                          <li>
+                            <a href="news-details.html">Tendars</a>
+                          </li>
+                          <li>
+                            <a href="news-layout-1.html">Careers</a>
+                          </li>
+                          <li>
+                            <a href="news-layout-2.html">Contact Us</a>
+                          </li>
+                        </ul>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href="contact.html">Contact</a>
-                      </li>
+                      </li> */}
                     </ul>
                   </nav>
                 </div>
