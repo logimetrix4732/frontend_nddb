@@ -3029,9 +3029,9 @@ input.e-check-input:checked::after {
   border-radius: 0px 0px 0px 0px;
   
 }
-.header-sticky .bd-header__logo img {
+/* .header-sticky .bd-header__logo img {
   width: 200px !important;
-}
+} */
 .header-sticky .bd-header__logo-2 img {
   width: 130px;
 }

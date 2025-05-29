@@ -78,6 +78,7 @@ const App = () => {
         </div>
       </div>
       {/* Preloader end */}
+      
       {/* Offcanvas area start */}
       <div className="fix">
         <div className="offcanvas__info">
@@ -237,6 +238,8 @@ const App = () => {
           </div>
         </div>
       </div>
+
+
       <div className="offcanvas-overlay" />
       <div className="offcanvas-overlay-white" />
       {/* Offcanvas area start */}
