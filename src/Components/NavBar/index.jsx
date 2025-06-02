@@ -82,7 +82,7 @@ const NavBar = () => {
           <div className="row align-items-center">
             <div className="col-xl-2 col-lg-2 col-md-4 col-4 p-0">
               <div className="bd-header__logo">
-                <a href="index.html">
+                <Link to="/">
                   <img
                     src={logo}
                     alt="logo"
@@ -95,7 +95,7 @@ const NavBar = () => {
                     }}
                   />
                   {/* <img src="assets/img/logo/logo.png" alt="logo" /> */}
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-xl-8 col-lg-9 col-md-4 d-none d-md-block">

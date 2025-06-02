@@ -176,6 +176,7 @@ const SocialMedia = () => {
               letterSpacing: "0.5px",
               textAlign: "center",
             }}
+            
           >
             FOLLOW
             <br />
