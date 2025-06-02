@@ -54,15 +54,9 @@ const Dashboard = () => {
                     <div className="row align-items-center">
                       <div className="col-xl-12">
                         <div className="bd-hero__content z-index-11 p-relative ">
-                          <span className="animated fadeInUp">
-                            Welcome to our dairy farm
-                          </span>
-                          <h2 className="animated fadeInUp">dairypress</h2>
+                          <h2 className="animated fadeInUp">Empowering Dairy <br /> Farmers</h2>
                           <p className="animated fadeInUp">
-                            Dairy producers worldwide face similar challenges
-                            around animal welfare, farm
-                            <br />
-                            profitability, food safety and work efficiency.
+                            Building sustainable dairy communities accross india.
                           </p>
                           
                         </div>
@@ -89,17 +83,11 @@ const Dashboard = () => {
                     <div className="row align-items-center">
                       <div className="col-xl-12">
                         <div className="bd-hero__content z-index-11 p-relative">
-                          <span data-animation="fadeInUp" data-delay=".3s">
-                            Get everytime fresh assets
-                          </span>
                           <h2 data-animation="fadeInUp" data-delay=".5s">
-                            fresh milk
+                            Innovative Dairy <br /> Solutions
                           </h2>
                           <p data-animation="fadeInUp" data-delay=".7s">
-                            Dairy producers worldwide face similar challenges
-                            around animal welfare, farm
-                            <br />
-                            profitability, food safety and work efficiency.
+                           Delivering technology to every village doorstep
                           </p>
                           
                         </div>
@@ -126,17 +114,11 @@ const Dashboard = () => {
                     <div className="row align-items-center">
                       <div className="col-xl-12">
                         <div className="bd-hero__content z-index-11 p-relative">
-                          <span data-animation="fadeInUp" data-delay=".3s">
-                            Welcome to our dairy farm
-                          </span>
                           <h2 data-animation="fadeInUp" data-delay=".5s">
-                            Milk process
+                            Stronger Rural <br /> Economies
                           </h2>
                           <p data-animation="fadeInUp" data-delay=".7s">
-                            Dairy producers worldwide face similar challenges
-                            around animal welfare, farm
-                            <br />
-                            profitability, food safety and work efficiency.
+                            Empowering women and farmers together
                           </p>
                         </div>
                       </div>
@@ -162,17 +144,11 @@ const Dashboard = () => {
                     <div className="row align-items-center">
                       <div className="col-xl-12">
                         <div className="bd-hero__content z-index-11 p-relative">
-                          <span data-animation="fadeInUp" data-delay=".3s">
-                            Welcome to our dairy farm
-                          </span>
                           <h2 data-animation="fadeInUp" data-delay=".5s">
-                            Milk process
+                            Stronger Rural <br /> Economies
                           </h2>
                           <p data-animation="fadeInUp" data-delay=".7s">
-                            Dairy producers worldwide face similar challenges
-                            around animal welfare, farm
-                            <br />
-                            profitability, food safety and work efficiency.
+                            Empowering women and farmers together
                           </p>
                           
                         </div>
@@ -199,17 +175,11 @@ const Dashboard = () => {
                     <div className="row align-items-center">
                       <div className="col-xl-12">
                         <div className="bd-hero__content z-index-11 p-relative">
-                          <span data-animation="fadeInUp" data-delay=".3s">
-                            Welcome to our dairy farm
-                          </span>
                           <h2 data-animation="fadeInUp" data-delay=".5s">
-                            Milk process
+                            Stronger Rural <br /> Economies
                           </h2>
                           <p data-animation="fadeInUp" data-delay=".7s">
-                            Dairy producers worldwide face similar challenges
-                            around animal welfare, farm
-                            <br />
-                            profitability, food safety and work efficiency.
+                            Empowering women and farmers together
                           </p>
                           
                         </div>
@@ -225,7 +195,8 @@ const Dashboard = () => {
           {/* Optional Navigation / Pagination */}
           <div className="bd-features__wrapper">
             <div className="bd-features__top">
-              <span>farming since 1956</span>
+              <span>since 1965</span>
+              {/* <span>farming since 1956</span> */}
               <img
                 className="bd-features__top-icon"
                 src="assets/img/features/features-cow.png"

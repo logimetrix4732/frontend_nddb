@@ -3639,7 +3639,8 @@ input.e-check-input:checked::after {
   }
 }
 .bd-hero__content h2 {
-  font-size: 120px;
+  font-size: 65px !important;
+  font-family: "Roboto", sans-serif !important;
   font-weight: var(--bd-fw-bold);
   text-transform: uppercase;
   color: var(--clr-common-white);

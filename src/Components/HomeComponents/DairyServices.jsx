@@ -34,7 +34,7 @@ const DairyServices = () => {
               className="card mb-4 p-3"
               style={{
                 background: "#c5e7d1",
-                borderRadius: 0,
+                borderRadius: '4px',
                 borderLeft: "6px solid #1FC25A",
                 borderRight: 0,
                 borderTop: 0,
@@ -64,7 +64,7 @@ const DairyServices = () => {
               className="card mb-4 p-4"
               style={{
                 background: "#c4d5f2",
-                borderRadius: 0,
+                borderRadius: '4px',
                 borderLeft: "6px solid #3C82F6",
                 borderRight: 0,
                 borderTop: 0,
@@ -123,3 +123,5 @@ const DairyServices = () => {
 };
 
 export default DairyServices;
+
+

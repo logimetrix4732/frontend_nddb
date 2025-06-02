@@ -3618,7 +3618,8 @@ input.e-check-input:checked::after {
   }
 }
 .bd-hero__content h2 {
-  font-size: 120px;
+  font-size: 70px !important;
+  /* font-size: 120px; */
   font-weight: var(--bd-fw-bold);
   text-transform: uppercase;
   color: var(--clr-common-white);
@@ -3627,7 +3628,7 @@ input.e-check-input:checked::after {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px) and (max-width: 1399px) {
   .bd-hero__content h2 {
-    font-size: 100px;
+    font-size: 70px !important;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3637,7 +3638,7 @@ input.e-check-input:checked::after {
 }
 @media (max-width: 575px) {
   .bd-hero__content h2 {
-    font-size: 50px;
+    font-size: 64px !important;
   }
 }
 .bd-hero__content p {
