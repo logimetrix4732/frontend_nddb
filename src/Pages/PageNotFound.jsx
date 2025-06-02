@@ -15,8 +15,9 @@ const PageNotFound = () => {
                 <div className="bd-error__content text">
                   <h3>Oops! That page can't be found.</h3>
                   <p>
-                    We couldn't find any results for your search. Use more
-                    generic words or double check your spelling.
+                    {/* We couldn't find any results for your search. Use more
+                    generic words or double check your spelling. */}
+                    The page you’re looking for may have been moved, deleted, or is currently under development. Please check back later or return to the homepage.
                   </p>
                   <Link to="/" className="btn bd-fill__btn-2">
                     {/* <Link to={-1} className="btn bd-fill__btn-2"> */}

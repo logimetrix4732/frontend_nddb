@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/img/logo/nddb_logo.jpg";
 
 // import gallerybg from "../src/assets/img/bg/gallery-bg.png";
@@ -16,6 +16,27 @@ import gallery10 from "../../../src/assets/img/gallery/thumb/10.jpg";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <header>
       {/* Header top area start */}
@@ -88,10 +109,10 @@ const NavBar = () => {
                     alt="logo"
                     className=""
                     style={{
-                      // height: '110px',
-                      padding: "5px 10px 5px 15px",
-                      borderRadius: "24px 20px 20px 24px",
+                      padding: hasScrolled ? "0 8px" : "15px 15px 15px 15px",
+                      borderRadius: "24px 24px 24px 24px",
                       width: "100%",
+                      transition: "padding 0.3s ease",
                     }}
                   />
                   {/* <img src="assets/img/logo/logo.png" alt="logo" /> */}
@@ -109,9 +130,9 @@ const NavBar = () => {
                       <li>
                         <Link to="/about-us">About</Link>
                       </li>
-                      <li className="has-dropdown">
-                        <Link href="#">Our Experties</Link>
-                        <ul className="submenu">
+                      <li className="">
+                        <Link to="/our-experties">Our Experties</Link>
+                        {/* <ul className="submenu">
                           <li>
                             <Link to="team">Team</Link>
                           </li>
@@ -148,7 +169,7 @@ const NavBar = () => {
                           <li>
                             <Link to="error">404 Page</Link>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
                       <li className="">
                         <Link to="milk-producer-org">Milk Producer Org.</Link>
@@ -186,7 +207,7 @@ const NavBar = () => {
             </div>
             <div className="col-xl-2 col-lg-1 col-md-4 col-8">
               <div className="bd-header__right d-flex align-items-center justify-content-end">
-                <div className="bd-header__action">
+                {/* <div className="bd-header__action">
                   <div className="bd-header__action-icon">
                     <button className="shoping__toggle">
                       <img
@@ -195,7 +216,7 @@ const NavBar = () => {
                       />
                     </button>
                   </div>
-                </div>
+                </div> */}
                 <div className="bd-header__hamburger">
                   <div className="bd-header__hamburger-icon">
                     {/* Large Screen Offcanvas Button (Gallery & Contact Info) */}

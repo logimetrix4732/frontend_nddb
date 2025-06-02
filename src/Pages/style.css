@@ -351,6 +351,29 @@
   }
 }
 
+@media (max-width: 580px) {
+  .majorHighlitIcon {
+    margin-top: -55px !important;
+  }
+}
+@media (max-width: 576px) {
+  /* .responsive-gap-sm {
+    gap: 10px !important;
+  } */
+
+}
+
+
+@media (min-width: 576px) and (max-width: 1191px) {
+  /* .majorHighlitIcon {
+    margin-top: -40px !important;
+  } */
+    .smallCards{
+    margin-top: 100px !important;
+  }
+}
+
+
 /* Restrict Offcanvas width and prevent overflow */
 .offcanvasCustom {
   max-width: 85vw !important; /* restrict width */
