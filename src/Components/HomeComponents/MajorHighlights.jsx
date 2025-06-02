@@ -73,7 +73,7 @@ const MajorHighlights = () => {
                 className="bg-white px-4 py-2 position-relative h-100"
                 style={{
                   borderRadius: "38px",
-                  boxShadow: "12px 12px 20px 0px #0000001A",
+                  boxShadow: `12px 12px 20px 0px #0000001A`,
                   // border: '1px solid red',
                   // height: '500px'
                 }}
@@ -104,9 +104,12 @@ const MajorHighlights = () => {
                     // marginTop: '40px',
                     minHeight: "60px",
                     width: "150px",
-                    borderRadius: "13px",
+                    // borderRadius: "13px",
+                    borderTopLeftRadius: "13px",
+                    borderTopRightRadius: "13px",
                     background: "#fff",
-                    boxShadow: "0 -4px 10px -2px rgba(0, 0, 0, 0.1)",
+                    // boxShadow: "0 -4px 10px -2px rgba(0, 0, 0, 0.1)",
+                    boxShadow: "0 -8px 10px -6px rgba(0, 0, 0, 0.3)",
                   }}
                 >
                   <h3
@@ -124,12 +127,12 @@ const MajorHighlights = () => {
                 {/* Card Content */}
                 <div className="pt-2">
                   <h6
-                    className="mb-3"
+                    className="mb-3 responsive-margin-top"
                     style={{
                       color: "#1E1E1E",
                       fontSize: "16px",
                       fontWeight: 700,
-                      marginTop: '30px'
+                      marginTop: "30px",
                     }}
                   >
                     {item.title}
@@ -154,3 +157,5 @@ const MajorHighlights = () => {
 };
 
 export default MajorHighlights;
+
+

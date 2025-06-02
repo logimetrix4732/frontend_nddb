@@ -6,6 +6,7 @@ import successStory from "../../Images/successStories.jpg";
 import bgCow from "../../Images/bg-cow.png";
 
 const SuccessStories = () => {
+  
   const [stories] = useState([
     {
       title: "Transforming Rural Livelihoods",
@@ -64,7 +65,7 @@ const SuccessStories = () => {
             <div
               className="position-relative w-100"
               style={{
-                borderRadius: "14px",
+                borderRadius: "12px",
                 overflow: "hidden",
                 height: "450px",
               }}
@@ -139,3 +140,4 @@ const SuccessStories = () => {
 };
 
 export default SuccessStories;
+

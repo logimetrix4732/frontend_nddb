@@ -10,14 +10,14 @@ import "./style.css";
 const Home = () => {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <Dashboard />
       <DairyServices />
       <SuccessStories />
       <Cards />
       <MajorHighlights />
       <SocialMedia />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

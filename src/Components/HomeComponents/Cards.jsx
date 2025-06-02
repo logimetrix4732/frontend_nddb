@@ -41,7 +41,7 @@ const Cards = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   height: "280px",
-                  borderRadius: "14px",
+                  borderRadius: "12px",
                 }}
               ></div>
 
@@ -50,7 +50,7 @@ const Cards = () => {
                 style={{
                   bottom: "-40px",
                   zIndex: 2,
-                  borderRadius: "14px",
+                  borderRadius: "4px",
                 }}
               >
                 <h6

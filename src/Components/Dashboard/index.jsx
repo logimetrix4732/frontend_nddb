@@ -36,6 +36,7 @@ const Dashboard = () => {
   return (
     <>
       <section className="bd-hero__area">
+
         <div className="hero__active swiper-container">
           <div className="swiper-wrapper">
             <div className="swiper-slide">
@@ -52,7 +53,7 @@ const Dashboard = () => {
                   <div className="container">
                     <div className="row align-items-center">
                       <div className="col-xl-12">
-                        <div className="bd-hero__content z-index-11 p-relative">
+                        <div className="bd-hero__content z-index-11 p-relative ">
                           <span className="animated fadeInUp">
                             Welcome to our dairy farm
                           </span>
@@ -63,14 +64,7 @@ const Dashboard = () => {
                             <br />
                             profitability, food safety and work efficiency.
                           </p>
-                          <div className="bd-hero__btn-wrapper animated fadeInDown">
-                            <a className="bd-hero__btn-1" href="about.html">
-                              Our Products
-                            </a>
-                            <a className="bd-hero__btn-2" href="about.html">
-                              about us
-                            </a>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>
@@ -107,18 +101,7 @@ const Dashboard = () => {
                             <br />
                             profitability, food safety and work efficiency.
                           </p>
-                          <div
-                            className="bd-hero__btn-wrapper"
-                            data-animation="fadeInUp"
-                            data-delay=".9s"
-                          >
-                            <a className="bd-hero__btn-1" href="about.html">
-                              Our Products
-                            </a>
-                            <a className="bd-hero__btn-2" href="about.html">
-                              about us
-                            </a>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>
@@ -155,18 +138,6 @@ const Dashboard = () => {
                             <br />
                             profitability, food safety and work efficiency.
                           </p>
-                          <div
-                            className="bd-hero__btn-wrapper"
-                            data-animation="fadeInUp"
-                            data-delay=".9s"
-                          >
-                            <a className="bd-hero__btn-1" href="about.html">
-                              Our Products
-                            </a>
-                            <a className="bd-hero__btn-2" href="about.html">
-                              about us
-                            </a>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -203,18 +174,7 @@ const Dashboard = () => {
                             <br />
                             profitability, food safety and work efficiency.
                           </p>
-                          <div
-                            className="bd-hero__btn-wrapper"
-                            data-animation="fadeInUp"
-                            data-delay=".9s"
-                          >
-                            <a className="bd-hero__btn-1" href="about.html">
-                              Our Products
-                            </a>
-                            <a className="bd-hero__btn-2" href="about.html">
-                              about us
-                            </a>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>
@@ -223,7 +183,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            {/* Slide 3 */}
+            {/* Slide 4 */}
             <div className="swiper-slide">
               <div className="bd-singel__hero">
                 <div className="hero__height d-flex align-items-center p-relative">
@@ -251,18 +211,7 @@ const Dashboard = () => {
                             <br />
                             profitability, food safety and work efficiency.
                           </p>
-                          <div
-                            className="bd-hero__btn-wrapper"
-                            data-animation="fadeInUp"
-                            data-delay=".9s"
-                          >
-                            <a className="bd-hero__btn-1" href="about.html">
-                              Our Products
-                            </a>
-                            <a className="bd-hero__btn-2" href="about.html">
-                              about us
-                            </a>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>
@@ -270,6 +219,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
+
           </div>
 
           {/* Optional Navigation / Pagination */}

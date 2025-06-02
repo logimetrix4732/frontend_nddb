@@ -2,22 +2,17 @@ import React, { useState, useRef } from "react";
 import bgImage from "../../Images/social-bg.jpg";
 
 const icons = [
-  { class: "ri-youtube-fill", url: "https://youtube.com", color: "#FF0000" },
-  { class: "ri-linkedin-fill", url: "https://linkedin.com", color: "#0077B5" },
+  { class: "ri-youtube-fill", url: "https://www.youtube.com/@nddbdairyservices6754", color: "#FF0000" },
+  { class: "ri-linkedin-fill", url: "https://www.linkedin.com/company/nddb-dairy-services/", color: "#0077B5" },
   { class: "ri-twitter-line", url: "https://twitter.com", color: "#1DA1F2" },
   { class: "ri-facebook-fill", url: "https://facebook.com", color: "#1877F2" },
-  {
-    class: "ri-instagram-line",
-    url: "https://instagram.com",
-    color: "#E1306C",
-  },
+  { class: "ri-instagram-line", url: "https://instagram.com", color: "#E1306C" },
 ];
 
 const SocialMedia = () => {
   const [isOpen, setIsOpen] = useState(false);
   const timerRef = useRef(null);
 
-  // Wider radius for further icon spread
   const radius = 270;
   const startAngle = 180;
   const stepAngle = 25;
@@ -37,7 +32,9 @@ const SocialMedia = () => {
     const x = radius * Math.cos(angleRad);
     const y = radius * Math.sin(angleRad);
     return {
-      transform: isOpen ? `translate(${x}px, ${y}px)` : "translate(0, 0)",
+      transform: isOpen
+        ? `translate(${x}px, ${y}px) scale(1)`
+        : "translate(0, 0) scale(0.5)",
       opacity: isOpen ? 1 : 0,
       pointerEvents: isOpen ? "auto" : "none",
     };
@@ -122,6 +119,7 @@ const SocialMedia = () => {
           height: "70px",
           margin: "30px",
           borderRadius: "50%",
+          zIndex: 10,
         }}
       >
         {/* Social Icons */}
@@ -149,26 +147,25 @@ const SocialMedia = () => {
           </a>
         ))}
 
-        {/* Main Button with Pulse */}
+        {/* Main Button with Pulse + Bounce */}
         <div
-          className="share-toggle"
+          className={`share-toggle ${isOpen ? "bounce" : ""}`}
           style={{
             backgroundColor: "rgba(0, 78, 28, 0.54)",
             borderRadius: "50%",
-            width: "70px",
-            height: "70px",
+            width: "85px",
+            height: "85px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: isOpen ? "#004E1C80" : "0 4px 15px rgba(0, 0, 0, 0.3)",
             color: "white",
             fontSize: "11px",
             flexDirection: "column",
             cursor: "pointer",
-            zIndex: 10,
             transition: "all 0.4s ease",
-            transform: isOpen ? "scale(1.05)" : "scale(1)",
-            animation: isOpen ? "none" : "pulse 2s infinite ease-in-out",
+            transform: isOpen ? "scale(1.1)" : "scale(1)",
+            animation: isOpen ? "bounce 0.6s ease" : "pulse 2s infinite ease-in-out",
+            zIndex: 20,
           }}
         >
           <div
@@ -187,7 +184,7 @@ const SocialMedia = () => {
         </div>
       </div>
 
-      {/* Inject Pulse Animation */}
+      {/* Inject Pulse & Bounce Animations */}
       <style>{`
         @keyframes pulse {
           0% {
@@ -202,6 +199,13 @@ const SocialMedia = () => {
             transform: scale(1);
             box-shadow: 0 0 0 0 rgba(0, 78, 28, 0);
           }
+        }
+
+        @keyframes bounce {
+          0%   { transform: scale(1); }
+          30%  { transform: scale(1.2); }
+          60%  { transform: scale(0.95); }
+          100% { transform: scale(1.1); }
         }
       `}</style>
     </div>

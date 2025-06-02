@@ -6,11 +6,14 @@ import logo from "../../assets/img/logo/nddb_logo.jpg";
 // import gallery02 from "../src/assets/img/gallery/gallery-02.jpg";
 // import gallery03 from "../src/assets/img/gallery/gallery-03.jpg";
 // import gallery04 from "../src/assets/img/gallery/gallery-04.jpg";
+
 import gallery06 from "../../../src/assets/img/gallery/thumb/06.jpg";
 import gallery07 from "../../../src/assets/img/gallery/thumb/07.jpg";
 import gallery08 from "../../../src/assets/img/gallery/thumb/08.jpg";
 import gallery09 from "../../../src/assets/img/gallery/thumb/09.jpg";
 import gallery10 from "../../../src/assets/img/gallery/thumb/10.jpg";
+
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -18,7 +21,7 @@ const NavBar = () => {
       {/* Header top area start */}
       <div className="bd-header__top-area pg-bg d-none d-md-block">
         <div className="container">
-          <div className="row align-items-center">
+          <div className="row align-items-center gx-0">
             <div className="col-xl-8 col-lg-8 col-md-9 col-8">
               <div className="bd-header__contact-spacing">
                 <div className="bd-header__contact">
@@ -39,7 +42,7 @@ const NavBar = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-4  col-md-3 col-4">
+            {/* <div className="col-xl-4 col-lg-4  col-md-3 col-4">
               <div className="bd-header__social text-end">
                 <ul>
                   <li>
@@ -69,7 +72,7 @@ const NavBar = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -86,8 +89,8 @@ const NavBar = () => {
                     className=""
                     style={{
                       // height: '110px',
-                      padding: "10px 10px 10px 30px",
-                      borderRadius: "38px 20px 20px 38px",
+                      padding: "5px 10px 5px 15px",
+                      borderRadius: "24px 20px 20px 24px",
                       width: "100%",
                     }}
                   />
@@ -101,78 +104,78 @@ const NavBar = () => {
                   <nav id="mobile-menu">
                     <ul className="menuLinks">
                       <li className="">
-                        <a href="index.html">Home</a>
+                        <Link to="/">Home</Link>
                       </li>
                       <li>
-                        <a href="about.html">About</a>
+                        <Link to="/about-us">About</Link>
                       </li>
                       <li className="has-dropdown">
-                        <a href="#">Our Experties</a>
+                        <Link href="#">Our Experties</Link>
                         <ul className="submenu">
                           <li>
-                            <a href="team.html">Team</a>
+                            <Link to="team">Team</Link>
                           </li>
                           <li>
-                            <a href="team-details.html">Team Details</a>
+                            <Link to="team-details">Team Details</Link>
                           </li>
                           <li>
-                            <a href="gallery.html">Gallery</a>
+                            <Link to="gallary">Gallery</Link>
                           </li>
                           <li>
-                            <a href="faq.html">Faq</a>
+                            <Link to="faq">Faq</Link>
                           </li>
                           <li>
-                            <a href="shop.html">Shop</a>
+                            <Link to="shop">Shop</Link>
                           </li>
                           <li>
-                            <a href="product-details.html">Product Details</a>
+                            <Link to="product-details">Product Details</Link>
                           </li>
                           <li>
-                            <a href="wishlist.html">Wishlist</a>
+                            <Link to="wishlist">Wishlist</Link>
                           </li>
                           <li>
-                            <a href="cart.html">Cart</a>
+                            <Link to="cart">Cart</Link>
                           </li>
                           <li>
-                            <a href="checkout.html">Checkout</a>
+                            <Link to="checkout">Checkout</Link>
                           </li>
                           <li>
-                            <a href="login.html">Login</a>
+                            <Link to="login">Login</Link>
                           </li>
                           <li>
-                            <a href="register.html">Register</a>
+                            <Link to="register">Register</Link>
                           </li>
                           <li>
-                            <a href="error.html">404 Page</a>
+                            <Link to="error">404 Page</Link>
                           </li>
                         </ul>
                       </li>
                       <li className="">
-                        <a href="service.html">Milk Producer Org.</a>
+                        <Link to="milk-producer-org">Milk Producer Org.</Link>
                       </li>
                       <li className="">
-                        <a href="news.html">Semen Station</a>
-                      </li>
-                      <li className="">
-                        <a href="news.html">Blogs</a>
+                        <Link to="semen-station">Semen Station</Link>
                       </li>
                       <li className="has-dropdown">
-                        <a>More</a>
+                        <Link>More</Link>
                         <ul className="submenu">
                           <li>
-                            <a href="news.html">New Initiative</a>
+                            <Link to="new-initiative">New Initiative</Link>
                           </li>
                           <li>
-                            <a href="news-details.html">Publications</a>
+                            <Link to="publications">Publications</Link>
                           </li>
                           <li>
-                            <a href="news-details.html">Tendars</a>
+                            <Link to="/tenders">Tendars</Link>
                           </li>
                           <li>
-                            <a href="news-layout-1.html">Careers</a>
+                            <Link to="careers">Careers</Link>
                           </li>
                           <li>
-                            <a href="news-layout-2.html">Contact Us</a>
+                            <Link to="/blogs">Blogs</Link>
+                          </li>
+                          <li>
+                            <Link to="/contact-us">Contact Us</Link>
                           </li>
                         </ul>
                       </li>
@@ -195,12 +198,27 @@ const NavBar = () => {
                 </div>
                 <div className="bd-header__hamburger">
                   <div className="bd-header__hamburger-icon">
+                    {/* Large Screen Offcanvas Button (Gallery & Contact Info) */}
                     <button
-                      className="side-toggle"
+                      className="side-toggle d-none d-lg-block"
                       data-bs-toggle="offcanvas"
                       href="#offcanvasExample"
                       role="button"
-                      aria-controls="offcanvasExample"
+                      aria-controls="mobileOffcanvasLabel"
+                    >
+                      <img
+                        src="assets/img/icon/hamburger-icon.png"
+                        alt="hamburger-icon"
+                      />
+                    </button>
+
+                    {/* Small Screen Offcanvas Button (Mobile Menu Links) */}
+                    <button
+                      className="side-toggle d-block d-lg-none"
+                      data-bs-toggle="offcanvas"
+                      href="#mobileOffcanvas"
+                      role="button"
+                      aria-controls="offcanvasMobileMenu"
                     >
                       <img
                         src="assets/img/icon/hamburger-icon.png"
@@ -215,6 +233,8 @@ const NavBar = () => {
         </div>
       </div>
 
+      {/* offcanvas for desktop with gallary and contact details  */}
+
       <div
         className="offcanvas offcanvas-end"
         tabindex="-1"
@@ -222,7 +242,6 @@ const NavBar = () => {
         aria-labelledby="offcanvasExampleLabel"
       >
         <div className="offcanvas-header offcanvas__top mb-40 d-flex justify-content-between align-items-center">
-
           <div className="offcanvas__logo logo">
             <a href="index.html">
               <img src={logo} alt="logo" style={{ height: "60px" }} />
@@ -240,15 +259,7 @@ const NavBar = () => {
           </div>
         </div>
         <div className="offcanvas-body">
-          <div className="offcanvas__search mb-25">
-            <form action="#">
-              <input type="text" placeholder="What are you searching for?" />
-              <button type="submit">
-                <i className="far fa-search" />
-              </button>
-            </form>
-          </div>
-          <div className="mobile-menu fix mb-40" />
+          <div className="mobile-menu fix mb-10" />
           <div className="sidebar__thumb d-none d-lg-block mb-20">
             <div className="row gx-2">
               <div className="col-4">
@@ -323,10 +334,10 @@ const NavBar = () => {
                 <div className="offcanvas__contact-text">
                   <a
                     target="_blank"
-                    href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873"
+                    href="https://www.google.com/maps/place/NDDB+Dairy+Services/@28.5648439,77.1973872,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce279fa28f713:0xa6914db36a4ac6a6!8m2!3d28.5648439!4d77.1999621!16s%2Fg%2F1hf6ft670?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D"
                   >
-                    NDDB House, Safdarjung Enclave,
-                    New Delhi, Southwest Delhi, Delhi 110029
+                    NDDB House, Safdarjung Enclave, New Delhi, Southwest Delhi,
+                    Delhi 110029
                   </a>
                 </div>
               </li>
@@ -345,7 +356,7 @@ const NavBar = () => {
                 <div className="offcanvas__contact-text">
                   <a href="tel:+012-345-6789">
                     <span className="mailto:support@mail.com">
-                    enquiry@nddbdairyservices.com
+                      enquiry@nddbdairyservices.com
                     </span>
                   </a>
                 </div>
@@ -365,12 +376,12 @@ const NavBar = () => {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.youtube.com/@nddbdairyservices6754">
                   <i className="fab fa-youtube" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/nddb-dairy-services/">
                   <i className="fab fa-linkedin" />
                 </a>
               </li>
@@ -378,6 +389,179 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+
+      {/* offcanvas for the small screen with navlinks */}
+
+      <div
+        className="offcanvas offcanvas-end d-lg-none offcanvasCustom"
+        tabIndex="-1"
+        id="mobileOffcanvas"
+        aria-labelledby="mobileOffcanvasLabel"
+      >
+        <div className="offcanvas-header offcanvas__top mb-10 d-flex justify-content-between align-items-center">
+          <div className="offcanvas__logo logo">
+            <a href="index.html">
+              <img src={logo} alt="logo" style={{ height: "60px" }} />
+            </a>
+          </div>
+          <div className="offcanvas__close">
+            <button
+              className="offcanvas__close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              // type="button"
+            >
+              <i className="fal fa-times" />
+            </button>
+          </div>
+        </div>
+        <div className="offcanvas-body px-4">
+          <nav className="nav flex-column mb-4">
+            <a className="nav-link border-bottom py-2 text-dark" href="/">
+              Home
+            </a>
+            <a
+              className="nav-link border-bottom py-2 text-dark"
+              href="/about-us"
+            >
+              About Us
+            </a>
+
+            <div className="border-bottom py-2">
+              <div
+                className="d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse"
+                data-bs-target="#expertiseDropdown"
+                aria-expanded="false"
+                aria-controls="expertiseDropdown"
+                style={{ cursor: "pointer" }}
+              >
+                <span className="text-dark fw-medium">Area Of Expertise</span>
+                <span className="dropdown-icon-circle d-flex align-items-center justify-content-center">
+                  <i
+                    className="ri-add-line text-success"
+                    style={{ fontSize: "16px" }}
+                  ></i>
+                </span>
+              </div>
+              <div className="collapse mt-2 ps-3" id="expertiseDropdown">
+                <a
+                  className="nav-link text-muted d-block py-1"
+                  href="/expertise/milk"
+                >
+                  Action
+                </a>
+                <a
+                  className="nav-link text-muted d-block py-1"
+                  href="/expertise/supply"
+                >
+                  Another Action
+                </a>
+                <a
+                  className="nav-link text-muted d-block py-1"
+                  href="/expertise/maintenance"
+                >
+                  More Links
+                </a>
+              </div>
+            </div>
+
+            <a
+              class="nav-link border-bottom py-2 text-dark"
+              href="/milk-producer"
+            >
+              Milk Producer Org.
+            </a>
+            <a
+              className="nav-link border-bottom py-2 text-dark"
+              href="/seamen-station"
+            >
+              Seamen Station
+            </a>
+            <a
+              className="nav-link border-bottom py-2 text-dark"
+              href="/new-initiative"
+            >
+              New Initiative
+            </a>
+            <a
+              className="nav-link border-bottom py-2 text-dark"
+              href="/publications"
+            >
+              Publications
+            </a>
+            <a className="nav-link border-bottom py-2 text-dark" href="/career">
+              Careers
+            </a>
+            <a
+              className="nav-link border-bottom py-2 text-dark"
+              href="/tenders"
+            >
+              Tenders
+            </a>
+            <a
+              className="nav-link border-bottom py-2 text-dark"
+              href="/contact-us"
+            >
+              Contact Us
+            </a>
+          </nav>
+
+          <div className="mt-3 mb-5">
+            <h6 className="text-success fw-bold mb-3">CONTACT INFO</h6>
+            <ul className="list-unstyled small text-muted">
+              <li className="mb-2 d-flex align-items-start">
+                <i className="ri-map-pin-line me-2 text-success"></i>
+                <span>
+                  NDDB House, Safdarjung Enclave,
+                  <br />
+                  New Delhi, Southwest Delhi, Delhi 110029
+                </span>
+              </li>
+              <li className="mb-2 d-flex align-items-start">
+                <i className="ri-phone-line me-2 text-success"></i>
+                <span>+91 7092922421</span>
+              </li>
+              <li className="d-flex align-items-start">
+                <i className="ri-mail-line me-2 text-success"></i>
+                <span>enquiry@nddbdairyservices.com</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="d-flex gap-2 mt-4">
+            <a
+              href="#"
+              className="btn btn-outline-success btn-sm rounded-circle d-flex align-items-center justify-content-center"
+              style={{ height: "36px", width: "36px" }}
+            >
+              <i className="ri-facebook-fill"></i>
+            </a>
+            <a
+              href="#"
+              className="btn btn-outline-success btn-sm rounded-circle d-flex align-items-center justify-content-center"
+              style={{ height: "36px", width: "36px" }}
+            >
+              <i className="ri-twitter-fill"></i>
+            </a>
+            <a
+              href="#"
+              className="btn btn-outline-success btn-sm rounded-circle d-flex align-items-center justify-content-center"
+              style={{ height: "36px", width: "36px" }}
+            >
+              <i className="ri-youtube-fill"></i>
+            </a>
+            <a
+              href="#"
+              className="btn btn-outline-success btn-sm rounded-circle d-flex align-items-center justify-content-center"
+              style={{ height: "36px", width: "36px" }}
+            >
+              <i className="ri-linkedin-box-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </header>
   );
 };

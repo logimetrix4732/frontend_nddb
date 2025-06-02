@@ -10,7 +10,7 @@ const Footer = () => {
         backgroundColor: "#004E1C",
         overflow: "hidden",
         height: "500px",
-        marginTop: '60px',
+        // marginTop: '60px',
       }}
     >
       {/* Top Content */}
@@ -46,6 +46,7 @@ const Footer = () => {
                 ></i>
               </button>
             </div> */}
+
             <div className="bd-cta__input-item mb-30">
               <p className="fw-bold mb-3 text-white">email address</p>
               <div className="bd-cta__input">
@@ -218,3 +219,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
