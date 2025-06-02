@@ -6,7 +6,6 @@ import successStory from "../../Images/successStories.jpg";
 import bgCow from "../../Images/bg-cow.png";
 
 const SuccessStories = () => {
-  
   const [stories] = useState([
     {
       title: "Transforming Rural Livelihoods",
@@ -140,4 +139,3 @@ const SuccessStories = () => {
 };
 
 export default SuccessStories;
-

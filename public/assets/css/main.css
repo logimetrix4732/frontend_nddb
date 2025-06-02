@@ -4871,7 +4871,7 @@ input.e-check-input:checked::after {
 .bd-service__content-2 {
   position: relative;
   background: var(--clr-common-white);
-  padding: 34px 40px;
+  padding: 34px 20px 34px 15px;
   -webkit-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
   -ms-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
@@ -5043,7 +5043,7 @@ input.e-check-input:checked::after {
 .bd-service__icon {
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 20px;
   transform: translateY(-50%);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 1200px) and (max-width: 1399px), (max-width: 575px) {
@@ -5077,7 +5077,7 @@ input.e-check-input:checked::after {
 .bd-service__overlay {
   background: var(--clr-common-body-text);
   position: relative;
-  padding: 35px 40px;
+  padding: 35px 40px 35px 20px;
   z-index: 1;
   -webkit-border-radius: 0px 0px 6px 6px;
   -moz-border-radius: 0px 0px 6px 6px;
