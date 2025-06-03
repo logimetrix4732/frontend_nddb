@@ -16,7 +16,6 @@ import gallery10 from "../../../src/assets/img/gallery/thumb/10.jpg";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
-
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
@@ -35,7 +34,6 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   return (
     <header>
@@ -582,12 +580,8 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-
     </header>
   );
 };
 
 export default NavBar;
-
-
-
