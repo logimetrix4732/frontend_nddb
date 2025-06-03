@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import bgImage from "../../Images/social-bg.jpg";
 
 const icons = [
@@ -11,20 +11,24 @@ const icons = [
 
 const SocialMedia = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const timerRef = useRef(null);
+  const ref = useRef(null);
 
   const radius = 270;
   const startAngle = 180;
   const stepAngle = 25;
 
-  const handleMouseEnter = () => {
-    clearTimeout(timerRef.current);
-    setIsOpen(true);
-  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsOpen(entry.isIntersecting);
+      },
+      { threshold: 0.4 }
+    );
 
-  const handleMouseLeave = () => {
-    timerRef.current = setTimeout(() => setIsOpen(false), 800);
-  };
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   const getPositionStyle = (index) => {
     const angleDeg = startAngle + index * stepAngle;
@@ -42,6 +46,7 @@ const SocialMedia = () => {
 
   return (
     <div
+      ref={ref}
       className="social-container mt-5 mb-5"
       style={{
         backgroundImage: `linear-gradient(to bottom right, rgba(0,0,0,0.25), rgba(0,0,0,0.15)), url(${bgImage})`,
@@ -58,7 +63,7 @@ const SocialMedia = () => {
         justifyContent: "flex-end",
       }}
     >
-      {/* Outer Light Green Circle */}
+      {/* Decorative Circles */}
       <div
         style={{
           position: "absolute",
@@ -73,8 +78,6 @@ const SocialMedia = () => {
           zIndex: 0,
         }}
       />
-
-      {/* Inner Darker Green Circle */}
       <div
         style={{
           position: "absolute",
@@ -89,8 +92,6 @@ const SocialMedia = () => {
           zIndex: 1,
         }}
       />
-
-      {/* Glow overlay */}
       <div
         style={{
           position: "absolute",
@@ -108,11 +109,9 @@ const SocialMedia = () => {
         }}
       />
 
-      {/* Toggle + Icons */}
+      {/* Main Button + Icons */}
       <div
         className="social-wrapper"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         style={{
           position: "relative",
           width: "70px",
@@ -122,7 +121,6 @@ const SocialMedia = () => {
           zIndex: 10,
         }}
       >
-        {/* Social Icons */}
         {icons.map((icon, index) => (
           <a
             key={index}
@@ -147,7 +145,6 @@ const SocialMedia = () => {
           </a>
         ))}
 
-        {/* Main Button with Pulse + Bounce */}
         <div
           className={`share-toggle ${isOpen ? "bounce" : ""}`}
           style={{
@@ -161,7 +158,7 @@ const SocialMedia = () => {
             color: "white",
             fontSize: "11px",
             flexDirection: "column",
-            cursor: "pointer",
+            cursor: "default",
             transition: "all 0.4s ease",
             transform: isOpen ? "scale(1.1)" : "scale(1)",
             animation: isOpen ? "bounce 0.6s ease" : "pulse 2s infinite ease-in-out",
@@ -176,7 +173,6 @@ const SocialMedia = () => {
               letterSpacing: "0.5px",
               textAlign: "center",
             }}
-            
           >
             FOLLOW
             <br />
@@ -185,27 +181,18 @@ const SocialMedia = () => {
         </div>
       </div>
 
-      {/* Inject Pulse & Bounce Animations */}
+      {/* Animations */}
       <style>{`
         @keyframes pulse {
-          0% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(0, 78, 28, 0.4);
-          }
-          70% {
-            transform: scale(1.1);
-            box-shadow: 0 0 0 10px rgba(0, 78, 28, 0);
-          }
-          100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(0, 78, 28, 0);
-          }
+          0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 78, 28, 0.4); }
+          70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(0, 78, 28, 0); }
+          100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 78, 28, 0); }
         }
 
         @keyframes bounce {
-          0%   { transform: scale(1); }
-          30%  { transform: scale(1.2); }
-          60%  { transform: scale(0.95); }
+          0% { transform: scale(1); }
+          30% { transform: scale(1.2); }
+          60% { transform: scale(0.95); }
           100% { transform: scale(1.1); }
         }
       `}</style>
@@ -214,4 +201,3 @@ const SocialMedia = () => {
 };
 
 export default SocialMedia;
-

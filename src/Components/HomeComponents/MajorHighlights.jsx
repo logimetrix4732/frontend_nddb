@@ -58,12 +58,12 @@ const MajorHighlights = () => {
         </p>
 
         <div
-          className="row g-4 justify-content-center"
+          className="row g-4 justify-content-center responsive-gap-sm"
           style={{ marginTop: "90px" }}
         >
           {highlights.map((item, index) => (
             <div
-              className="col-12 col-sm-6 col-md-4 col-xl-2"
+              className="col-12 col-sm-6 col-md-4 col-xl-2 smallCards"
               key={index}
               // style={{
               //   minHeight: '250px'
