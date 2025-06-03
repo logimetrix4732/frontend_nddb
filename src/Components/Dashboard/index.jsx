@@ -36,7 +36,6 @@ const Dashboard = () => {
   return (
     <>
       <section className="bd-hero__area">
-
         <div className="hero__active swiper-container">
           <div className="swiper-wrapper">
             <div className="swiper-slide">
@@ -54,11 +53,13 @@ const Dashboard = () => {
                     <div className="row align-items-center">
                       <div className="col-xl-12">
                         <div className="bd-hero__content z-index-11 p-relative ">
-                          <h2 className="animated fadeInUp">Empowering Dairy <br /> Farmers</h2>
+                          <h2 className="animated fadeInUp">
+                            Empowering Dairy <br /> Farmers
+                          </h2>
                           <p className="animated fadeInUp">
-                            Building sustainable dairy communities accross india.
+                            Building sustainable dairy communities accross
+                            india.
                           </p>
-                          
                         </div>
                       </div>
                     </div>
@@ -87,9 +88,8 @@ const Dashboard = () => {
                             Innovative Dairy <br /> Solutions
                           </h2>
                           <p data-animation="fadeInUp" data-delay=".7s">
-                           Delivering technology to every village doorstep
+                            Delivering technology to every village doorstep
                           </p>
-                          
                         </div>
                       </div>
                     </div>
@@ -150,7 +150,6 @@ const Dashboard = () => {
                           <p data-animation="fadeInUp" data-delay=".7s">
                             Empowering women and farmers together
                           </p>
-                          
                         </div>
                       </div>
                     </div>
@@ -181,7 +180,6 @@ const Dashboard = () => {
                           <p data-animation="fadeInUp" data-delay=".7s">
                             Empowering women and farmers together
                           </p>
-                          
                         </div>
                       </div>
                     </div>
@@ -189,13 +187,12 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* Optional Navigation / Pagination */}
           <div className="bd-features__wrapper">
             <div className="bd-features__top">
-              <span>since 1965</span>
+              <span>since 1903</span>
               {/* <span>farming since 1956</span> */}
               <img
                 className="bd-features__top-icon"

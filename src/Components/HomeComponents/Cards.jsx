@@ -40,10 +40,7 @@ const Cards = () => {
           <div className="row">
             {cardsData.map((card, index) => (
               <div className="col-xl-4 col-lg-4 col-md-6" key={index}>
-                <div
-                  className="bd-service__item-2 mb-60"
-                  style={{ height: "400px" }}
-                >
+                <div className="bd-service__item-2 mb-60">
                   <div className="bd-service__thumb-2 w-img">
                     <img
                       src={card.img}
