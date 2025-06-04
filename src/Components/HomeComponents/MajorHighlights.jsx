@@ -55,7 +55,6 @@ const MajorHighlights = () => {
     <div
       className="py-5 mb-5 mt-5"
       style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "contain" }}
-      ref={ref}
     >
       <div className="container-fluid text-center">
         <p
@@ -84,6 +83,7 @@ const MajorHighlights = () => {
               // style={{
               //   minHeight: '250px'
               // }}
+              ref={ref}
             >
               <div
                 className="bg-white px-4 py-2 position-relative "
