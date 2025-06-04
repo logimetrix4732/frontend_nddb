@@ -286,7 +286,7 @@
 /* Horizontal green bar (under front image) */
 .horizontal-bar {
   position: absolute;
-  bottom: -10px;
+  bottom: -13px;
   right: 10px;
   width: 150px;
   height: 15px;
@@ -356,11 +356,57 @@
     margin-top: -55px !important;
   }
 }
-@media (max-width: 576px) {
-  /* .responsive-gap-sm {
-    gap: 10px !important;
-  } */
+/* The container to handle fixed layout */
+.card-content {
+  height: 160px; /* or however tall you need for the full content section */
+}
 
+/* Title always same height and clamp */
+.card-title-container {
+  height: 60px;
+}
+.card-title {
+  /* display: -webkit-box; */
+  -webkit-line-clamp: 2; /* or 3 if needed */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1E1E1E;
+  margin-top: 30px;
+}
+
+/* Description always same height and clamp */
+.card-desc-container {
+  height: 80px;
+  margin-top: 50px !important;
+}
+.card-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #6c757d; /* muted */
+}
+
+
+/* Consistent title height (allow up to 3 lines, truncate extra) */
+.smallCards h6 {
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 60px;
+}
+
+/* Consistent description height (allow up to 4 lines, truncate extra) */
+.smallCards p {
+  /* display: -webkit-box; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 10px; 
 }
 
 
@@ -368,8 +414,14 @@
   /* .majorHighlitIcon {
     margin-top: -40px !important;
   } */
-    .smallCards{
+    .smallCards {
     margin-top: 100px !important;
+  }
+}
+
+@media (max-width: 575px) {
+    .smallCards p{
+    min-height: 30px !important;
   }
 }
 
@@ -414,15 +466,3 @@ body.offcanvas-open {
 }
 
 
-
-/* ------------socail media image -------------- */
-
-/* Responsive background image handling for small screens */
-
-/* @media (max-width: 768px) {
-  .social-container {
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-  }
-} */

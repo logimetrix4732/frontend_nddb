@@ -190,9 +190,9 @@ const NavBar = () => {
                           <li>
                             <Link to="careers">Careers</Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link to="/blogs">Blogs</Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link to="/contact-us">Contact Us</Link>
                           </li>
@@ -585,3 +585,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
+

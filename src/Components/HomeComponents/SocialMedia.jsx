@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import bgImage from "../../Images/social-bg.jpg";
+// import bgImage from "../../Images/socialbg.jpg";
 
 const icons = [
   { class: "ri-youtube-fill", url: "https://www.youtube.com/@nddbdairyservices6754", color: "#FF0000" },
