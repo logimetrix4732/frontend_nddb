@@ -26,7 +26,9 @@ const About = () => {
                 <div className="bd-about__content-box-3 mb-60">
                   <div className="bd-section__title-wrapper mb-40">
                     <span className="bd-sub__title">About Us</span>
-                    <h3 className=" mb-25">
+                    <h3 className=" mb-25" style={{
+                      fontSize: '35px'
+                    }}>
                       NDDB Dairy Services (NDS), a Section 8 company registered
                       under the Companies Act, is a wholly owned subsidiary of
                       NDDB

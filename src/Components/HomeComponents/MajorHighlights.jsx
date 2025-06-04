@@ -113,7 +113,7 @@ const MajorHighlights = () => {
                     borderTopRightRadius: "13px",
                     background: "#fff",
                     // boxShadow: "0 -4px 10px -2px rgba(0, 0, 0, 0.1)",
-                    boxShadow: "0 -8px 10px -6px rgba(0, 0, 0, 0.3)",
+                    boxShadow: "0 -8px 10px -6px rgba(0, 0, 0, 0.2)",
                   }}
                 >
                   <span
