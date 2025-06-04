@@ -8,14 +8,15 @@ const DairyServices = () => {
     <div className="dairy-services-section position-relative overflow-hidden mb-5 mt-5">
       <div className="container py-5">
         <div className="row align-items-center">
+          
           {/* Left Column */}
           <div className="col-lg-7 mb-5 mb-lg-0">
-            <h2
-              className="section-title mb-3"
-              style={{ fontWeight: 800, color: "#004E1C", fontSize: "40px" }}
+            <p
+              className="section-title"
+              style={{ fontWeight: 800, color: "#004E1C", fontSize: "40px", marginBottom: '30px', lineHeight: '40px' }}
             >
               NDDB Dairy Services
-            </h2>
+            </p>
             <p
               className="mb-4"
               style={{
@@ -118,6 +119,7 @@ const DairyServices = () => {
 
       {/* Background Image */}
       <img src={bgImage} alt="bg structure" className="bg-structure" />
+      
     </div>
   );
 };

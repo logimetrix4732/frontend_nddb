@@ -46,17 +46,21 @@ const MajorHighlights = () => {
       style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "contain" }}
     >
       <div className="container-fluid text-center">
-        <h2
-          className="mb-4 mt-4"
-          style={{ color: "#004E1C", fontWeight: 800, fontSize: "40px" }}
+        <p
+          className=""
+          style={{
+            color: "#004E1C",
+            fontWeight: 800,
+            fontSize: "40px",
+            marginBottom: "30px",
+          }}
         >
           Major Highlights
-        </h2>
+        </p>
         <p className="mb-4" style={{ color: "#1E1E1E", fontSize: "17px" }}>
           Key accomplishments and initiatives that showcase our commitment to
           dairy sector <br /> development.
         </p>
-
         <div
           className="row g-4 justify-content-center responsive-gap-sm"
           style={{ marginTop: "90px" }}
@@ -70,12 +74,12 @@ const MajorHighlights = () => {
               // }}
             >
               <div
-                className="bg-white px-4 py-2 position-relative h-100"
+                className="bg-white px-4 py-2 position-relative " 
                 style={{
                   borderRadius: "38px",
                   boxShadow: `12px 12px 20px 0px #0000001A`,
                   // border: '1px solid red',
-                  // height: '500px'
+                  height: '260px'
                 }}
               >
                 {/* Icon Container */}
@@ -112,40 +116,29 @@ const MajorHighlights = () => {
                     boxShadow: "0 -8px 10px -6px rgba(0, 0, 0, 0.3)",
                   }}
                 >
-                  <h3
+                  <span
                     className="mb-0 mt-4"
                     style={{
                       fontSize: "24px",
                       lineHeight: "1.2",
                       fontWeight: 800,
+                      color: "#000",
                     }}
                   >
                     {item.stat}
-                  </h3>
+                  </span>
                 </div>
-
+                
                 {/* Card Content */}
-                <div className="pt-2">
-                  <h6
-                    className="mb-3 responsive-margin-top"
-                    style={{
-                      color: "#1E1E1E",
-                      fontSize: "16px",
-                      fontWeight: 700,
-                      marginTop: "30px",
-                    }}
-                  >
-                    {item.title}
-                  </h6>
-                  <p
-                    className="text-muted small"
-                    style={{
-                      fontSize: "14px",
-                      lineHeight: "1.4",
-                    }}
-                  >
-                    {item.desc}
-                  </p>
+                <div className="pt-2 d-flex flex-column justify-content-between card-content">
+                  <div className="card-title-container">
+                    <p className="card-title mb-3 responsive-margin-top mt-4">
+                      {item.title}
+                    </p>
+                  </div>
+                  <div className="card-desc-container">
+                    <p className="card-desc text-muted small">{item.desc}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -157,5 +150,3 @@ const MajorHighlights = () => {
 };
 
 export default MajorHighlights;
-
-
