@@ -53,7 +53,22 @@ const HomeCountUp = () => {
               <div className="bd-counter__item p-relative">
                 <div className="bd-counter__inner">
                   <div className="bd-counter__content">
-                    <span className="bd-counter__title">{item.title}</span>
+                    <span
+                      className="bd-counter__title"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                        marginBottom: "12px",
+                      }}
+                    >
+                      <img
+                        src={item.icon}
+                        alt="counter-icon"
+                        style={{ width: "auto", height: "30px" }}
+                      />
+                      {item.title}
+                    </span>
                     <div className="bd-counter__number">
                       {inView ? (
                         <CountUp
@@ -67,11 +82,8 @@ const HomeCountUp = () => {
                       <span>{item.suffix}</span>
                     </div>
                   </div>
-                  <div className="bd-counter__icon">
-                    <img src={item.icon} alt="counter-icon" />
-                  </div>
                 </div>
-                <p>{item.description}</p>
+                <p style={{ marginTop: "-12px" }}>{item.description}</p>
               </div>
             </div>
           ))}
