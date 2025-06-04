@@ -1,19 +1,23 @@
-import React from "react";
 import bgImage from "../../Images/bg-structure.png";
-import image1 from "../../Images/wind1.png";
-import image2 from "../../Images/wind2.png";
+import image1 from "../../Images/wind.png";
+import image2 from "../../Images/wind.png";
 
 const DairyServices = () => {
   return (
     <div className="dairy-services-section position-relative overflow-hidden mb-5 mt-5">
       <div className="container py-5">
         <div className="row align-items-center">
-          
           {/* Left Column */}
           <div className="col-lg-7 mb-5 mb-lg-0">
             <p
               className="section-title"
-              style={{ fontWeight: 800, color: "#004E1C", fontSize: "40px", marginBottom: '30px', lineHeight: '40px' }}
+              style={{
+                fontWeight: 800,
+                color: "#004E1C",
+                fontSize: "40px",
+                marginBottom: "30px",
+                lineHeight: "40px",
+              }}
             >
               NDDB Dairy Services
             </p>
@@ -35,7 +39,7 @@ const DairyServices = () => {
               className="card mb-4 p-3"
               style={{
                 background: "#c5e7d1",
-                borderRadius: '4px',
+                borderRadius: "4px",
                 borderLeft: "6px solid #1FC25A",
                 borderRight: 0,
                 borderTop: 0,
@@ -65,7 +69,7 @@ const DairyServices = () => {
               className="card mb-4 p-4"
               style={{
                 background: "#c4d5f2",
-                borderRadius: '4px',
+                borderRadius: "4px",
                 borderLeft: "6px solid #3C82F6",
                 borderRight: 0,
                 borderTop: 0,
@@ -119,11 +123,8 @@ const DairyServices = () => {
 
       {/* Background Image */}
       <img src={bgImage} alt="bg structure" className="bg-structure" />
-      
     </div>
   );
 };
 
 export default DairyServices;
-
-

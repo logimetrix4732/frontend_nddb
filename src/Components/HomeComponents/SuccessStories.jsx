@@ -6,7 +6,6 @@ import successStory from "../../Images/successStories.jpg";
 import bgCow from "../../Images/bg-cow.png";
 
 const SuccessStories = () => {
-
   const [stories] = useState([
     {
       title: "Transforming Rural Livelihoods",
@@ -70,7 +69,6 @@ const SuccessStories = () => {
                 height: "450px",
               }}
             >
-            
               <img
                 src={successStory}
                 alt="Success Story Video"
@@ -93,7 +91,12 @@ const SuccessStories = () => {
           >
             <p
               className="mt-2"
-              style={{ color: "#004E1C", fontWeight: 800, fontSize: "40px", lineHeight: '40px' }}
+              style={{
+                color: "#004E1C",
+                fontWeight: 800,
+                fontSize: "40px",
+                lineHeight: "40px",
+              }}
             >
               Success Stories
             </p>
@@ -141,4 +144,3 @@ const SuccessStories = () => {
 };
 
 export default SuccessStories;
-
