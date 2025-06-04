@@ -5,45 +5,57 @@ import icon2 from "../../Images/lucide_milk.png";
 import icon3 from "../../Images/fluent-emoji-high-contrast_man-farmer.png";
 import icon4 from "../../Images/mdi_graph-line.png";
 import icon5 from "../../Images/lucide_award.png";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 const highlights = [
   {
     icon: icon1,
-    stat: "20+",
+    value: 20,
+    suffix: "+",
     title: "Producer Organization Development",
     desc: "Established over 23 Milk Producer Organizations benefiting more than 800,000 dairy farmers across India.",
   },
   {
     icon: icon2,
-    stat: "60 Lac +",
+    value: 60,
+    suffix: " Lac +",
     title: "Quality Enhancement Programs",
     desc: "Implemented quality testing and assurance systems that have improved milk quality by 40% in partner regions.",
   },
   {
     icon: icon3,
-    stat: "300 K +",
+    value: 300,
+    suffix: " K +",
     title: "Farmer Training Initiatives",
     desc: "Conducted 5,000+ training programs reaching over 300,000 dairy farmers with modern practices and techniques.",
   },
   {
     icon: icon4,
-    stat: "4900 Cr+",
+    value: 4900,
+    suffix: " Cr+",
     title: "Economic Impact",
     desc: "Helped increase farmer incomes by an average of 35% through improved productivity and market access.",
   },
   {
     icon: icon5,
-    stat: "20+",
+    value: 20,
+    suffix: "+",
     title: "Recognition & Awards",
     desc: "Received multiple national awards for excellence in dairy development and rural empowerment.",
   },
 ];
 
 const MajorHighlights = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
     <div
       className="py-5 mb-5 mt-5"
       style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "contain" }}
+      ref={ref}
     >
       <div className="container-fluid text-center">
         <p
@@ -74,12 +86,12 @@ const MajorHighlights = () => {
               // }}
             >
               <div
-                className="bg-white px-4 py-2 position-relative " 
+                className="bg-white px-4 py-2 position-relative "
                 style={{
                   borderRadius: "38px",
                   boxShadow: `12px 12px 20px 0px #0000001A`,
                   // border: '1px solid red',
-                  height: '260px'
+                  height: "260px",
                 }}
               >
                 {/* Icon Container */}
@@ -125,10 +137,17 @@ const MajorHighlights = () => {
                       color: "#000",
                     }}
                   >
-                    {item.stat}
+                    {inView ? (
+                      <>
+                        <CountUp end={item.value} duration={2} separator="," />
+                        {item.suffix}
+                      </>
+                    ) : (
+                      <>0{item.suffix}</>
+                    )}
                   </span>
                 </div>
-                
+
                 {/* Card Content */}
                 <div className="pt-2 d-flex flex-column justify-content-between card-content">
                   <div className="card-title-container">
