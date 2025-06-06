@@ -185,7 +185,7 @@ const NavBar = () => {
                             <Link to="publications">Publications</Link>
                           </li>
                           <li>
-                            <Link to="careers">Careers</Link>
+                            <Link to="/CarrerPage">Careers</Link>
                           </li>
                           <li>
                             <Link to="/tenders">Tendars</Link>
@@ -509,9 +509,9 @@ const NavBar = () => {
             >
               Publications
             </a>
-            <a className="nav-link border-bottom py-2 text-dark" href="/career">
+            <Link className="nav-link border-bottom py-2 text-dark" to="/CarrerPage">
               Careers
-            </a>
+            </Link>
             <a
               className="nav-link border-bottom py-2 text-dark"
               href="/tenders"

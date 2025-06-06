@@ -9,6 +9,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Blog from "./Pages/Blog";
 import OurExperties from "./Pages/OurExperties";
+import CarrerPage from "./Pages/CarrerPage";
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/our-experties" element={<OurExperties />} />
+        <Route path="/CarrerPage" element={<CarrerPage />} />
+        <Route path="/CarrerPage/:id" element={<CarrerPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
