@@ -37,8 +37,10 @@ const SuccessStories = () => {
 
   return (
     <section
-      className="container-fluid px-3 position-relative mt-5"
-      style={{ overflowX: "hidden" }}
+      className="container-fluid px-3 position-relative mb-50"
+      style={{
+        overflowX: window.innerWidth < 768 ? "none" : "hidden",
+      }}
     >
       {/* Cow Image - Background Layer */}
       <div

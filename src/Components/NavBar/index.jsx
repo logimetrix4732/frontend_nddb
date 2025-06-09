@@ -454,44 +454,12 @@ const NavBar = () => {
               About Us
             </a>
 
-            <div className="border-bottom py-2">
-              <div
-                className="d-flex justify-content-between align-items-center"
-                data-bs-toggle="collapse"
-                data-bs-target="#expertiseDropdown"
-                aria-expanded="false"
-                aria-controls="expertiseDropdown"
-                style={{ cursor: "pointer" }}
-              >
-                <span className="text-dark fw-medium">Area Of Expertise</span>
-                <span className="dropdown-icon-circle d-flex align-items-center justify-content-center">
-                  <i
-                    className="ri-add-line text-success"
-                    style={{ fontSize: "16px" }}
-                  ></i>
-                </span>
-              </div>
-              <div className="collapse mt-2 ps-3" id="expertiseDropdown">
-                <a
-                  className="nav-link text-muted d-block py-1"
-                  href="/expertise/milk"
-                >
-                  Action
-                </a>
-                <a
-                  className="nav-link text-muted d-block py-1"
-                  href="/expertise/supply"
-                >
-                  Another Action
-                </a>
-                <a
-                  className="nav-link text-muted d-block py-1"
-                  href="/expertise/maintenance"
-                >
-                  More Links
-                </a>
-              </div>
-            </div>
+            <a
+              className="nav-link border-bottom py-2 text-dark"
+              href="/milk-producer"
+            >
+              Area Of Expertise
+            </a>
 
             <a
               className="nav-link border-bottom py-2 text-dark"

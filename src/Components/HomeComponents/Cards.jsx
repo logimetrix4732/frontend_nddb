@@ -35,7 +35,7 @@ const cardsData = [
 const Cards = () => {
   return (
     <>
-      <section className="bd-serrvice__area service__bg">
+      <section className="bd-serrvice__area service__bg mb-30">
         <div className="container">
           <div className="row">
             {cardsData.map((card, index) => (

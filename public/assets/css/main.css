@@ -3659,7 +3659,7 @@ input.e-check-input:checked::after {
 }
 @media (max-width: 575px) {
   .bd-hero__content h2 {
-    font-size: 50px;
+    font-size: 45px !important;
   }
 }
 .bd-hero__content p {

@@ -4,7 +4,7 @@ import image2 from "../../Images/wind.png";
 
 const DairyServices = () => {
   return (
-    <div className="dairy-services-section position-relative overflow-hidden mt-20 mb-30">
+    <div className="dairy-services-section position-relative overflow-hidden  mt-50 mb-50">
       <div className="container py-5">
         <div className="row align-items-center">
           {/* Left Column */}

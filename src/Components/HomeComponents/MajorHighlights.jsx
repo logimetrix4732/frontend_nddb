@@ -53,8 +53,9 @@ const MajorHighlights = () => {
   });
   return (
     <div
-      className="py-5 mt-30 mb-70"
+      className="py-5  mb-70"
       style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "contain" }}
+      ref={ref}
     >
       <div className="container-fluid text-center">
         <h2
@@ -77,21 +78,15 @@ const MajorHighlights = () => {
             <div
               className="col-12 col-sm-6 col-md-4 col-xl-2 smallCards"
               key={index}
-              // style={{
-              //   minHeight: '250px'
-              // }}
-              ref={ref}
             >
               <div
                 className="bg-white px-4 py-2 position-relative "
                 style={{
                   borderRadius: "38px",
                   boxShadow: `12px 12px 20px 0px #0000001A`,
-                  // border: '1px solid red',
                   height: "260px",
                 }}
               >
-                {/* Icon Container */}
                 <div
                   className="position-absolute top-0 start-50 translate-middle bg-white shadow 
                                 d-flex align-items-center justify-content-center majorHighlitIcon"

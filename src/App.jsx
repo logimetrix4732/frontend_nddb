@@ -26,7 +26,6 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/blogs" element={<Blog />} />
-        <Route path="/our-experties" element={<OurExperties />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
