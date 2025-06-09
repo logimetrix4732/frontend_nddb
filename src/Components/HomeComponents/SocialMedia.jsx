@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import bgImage from "../../Images/social-bg.jpg";
-// import bgImage from "../../Images/socialbg.jpg";
+// import bgImage from "../../Images/social-bg.jpg";
+import bgImage from "../../Images/socialbg.jpg";
 
 const icons = [
   {
@@ -66,7 +66,7 @@ const SocialMedia = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-        minHeight: "90vh",
+        minHeight: "80vh",
         width: "100%",
         height: "auto",
         position: "relative",

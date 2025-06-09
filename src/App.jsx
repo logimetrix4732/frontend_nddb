@@ -8,6 +8,7 @@ import MainLayout from "./Components/Layout/MainLayout";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Blog from "./Pages/Blog";
+import OurExperties from "./Pages/OurExperties";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/blogs" element={<Blog />} />
+        <Route path="/our-experties" element={<OurExperties />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>

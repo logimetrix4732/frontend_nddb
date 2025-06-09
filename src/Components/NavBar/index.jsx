@@ -185,10 +185,10 @@ const NavBar = () => {
                             <Link to="publications">Publications</Link>
                           </li>
                           <li>
-                            <Link to="/tenders">Tendars</Link>
+                            <Link to="careers">Careers</Link>
                           </li>
                           <li>
-                            <Link to="careers">Careers</Link>
+                            <Link to="/tenders">Tendars</Link>
                           </li>
                           {/* <li>
                             <Link to="/blogs">Blogs</Link>
@@ -256,7 +256,7 @@ const NavBar = () => {
 
       <div
         className="offcanvas offcanvas-end"
-        tabindex="-1"
+        tabIndex="-1"
         id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel"
       >
@@ -494,7 +494,7 @@ const NavBar = () => {
             </div>
 
             <a
-              class="nav-link border-bottom py-2 text-dark"
+              className="nav-link border-bottom py-2 text-dark"
               href="/milk-producer"
             >
               Milk Producer Org.
