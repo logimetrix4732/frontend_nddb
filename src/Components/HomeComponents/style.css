@@ -1,0 +1,11 @@
+/* style.css */
+
+.section-container {
+  overflow-x: unset; /* Default (desktop view ke liye) */
+}
+
+@media only screen and (max-width: 767px) {
+  .section-container {
+    overflow-x: hidden; /* Mobile view ke liye */
+  }
+}

@@ -53,8 +53,21 @@ const Cards = () => {
                   </div>
                   <div className="bd-service__content-2 transition-3">
                     <h3>
-                      <Link to="/">{card.title}</Link>
+                      <Link
+                        to="/"
+                        style={{
+                          fontSize:
+                            window.innerWidth <= 480
+                              ? "14px"
+                              : window.innerWidth <= 768
+                              ? "18px"
+                              : "24px",
+                        }}
+                      >
+                        {card.title}
+                      </Link>
                     </h3>
+
                     <Link className="bd-link__btn-2" to="/">
                       View Details
                     </Link>

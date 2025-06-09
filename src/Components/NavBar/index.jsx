@@ -20,7 +20,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 100) {
         setHasScrolled(true);
       } else {
         setHasScrolled(false);
@@ -107,8 +107,8 @@ const NavBar = () => {
                     alt="logo"
                     className=""
                     style={{
-                      padding: hasScrolled ? "0 8px" : "15px 15px 15px 15px",
-                      borderRadius: "24px 24px 24px 24px",
+                      padding: hasScrolled ? "0 8px" : "17px 15px 15px 15px",
+                      borderRadius: "20px 20px 20px 20px",
                       width: "100%",
                       transition: "padding 0.3s ease",
                     }}

@@ -27,6 +27,7 @@ const Footer = () => {
                   type="text"
                   placeholder="info@webmail.com"
                   className="ml-5"
+                  style={{ width: "240px" }}
                 />
                 <i className="ri-mail-open-line" style={{ color: "gray" }}></i>
               </div>
@@ -198,28 +199,30 @@ const Footer = () => {
       </div>
 
       {/* Custom CSS for hover effects */}
-      <style jsx>{`
-        .hover-link:hover {
-          opacity: 0.8;
-          transition: opacity 0.3s ease;
-        }
+      <style>
+        {`
+    .hover-link:hover {
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
 
-        .bd-cta__input input::placeholder {
-          color: rgba(255, 255, 255, 0.7);
-        }
+    .bd-cta__input input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
 
-        .bd-cta__input input:focus {
-          outline: none;
-          border-color: rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
-        }
+    .bd-cta__input input:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    }
 
-        @media (max-width: 576px) {
-          .small {
-            font-size: 0.8rem;
-          }
-        }
-      `}</style>
+    @media (max-width: 576px) {
+      .small {
+        font-size: 0.8rem;
+      }
+    }
+  `}
+      </style>
     </footer>
   );
 };
