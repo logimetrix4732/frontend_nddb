@@ -395,12 +395,20 @@ const NavBar = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/@nddbdairyservices6754">
+                <a
+                  href="https://www.youtube.com/@nddbdairyservices6754"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fab fa-youtube" />
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/nddb-dairy-services/">
+                <a
+                  href="https://www.linkedin.com/company/nddb-dairy-services/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fab fa-linkedin" />
                 </a>
               </li>
@@ -585,6 +593,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
-

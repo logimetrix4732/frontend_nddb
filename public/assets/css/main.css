@@ -2136,7 +2136,7 @@ input.e-check-input:checked::after {
 }
 
 .bd-section__title {
-  font-size: 60px;
+  font-size: 45px;
   color: var(--clr-common-body-text);
   line-height: 1.2;
 }
@@ -3067,7 +3067,7 @@ input.e-check-input:checked::after {
 }
 
 .bd-header__top-area {
-  padding: 6.5px 0;
+  padding: 3.5px 0;
 }
 .bd-header__top-area .container {
   max-width: 1920px;

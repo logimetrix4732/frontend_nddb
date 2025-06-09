@@ -10,9 +10,7 @@ import Contact from "./Pages/Contact";
 import Blog from "./Pages/Blog";
 
 function App() {
-
   return (
-
     // <Routes element={<MainLayout />}>
     //   <Route path="/" element={<Home />} />
     //   <Route path="/home" element={<AllHome1 />} />
@@ -30,7 +28,6 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
-    
   );
 }
 

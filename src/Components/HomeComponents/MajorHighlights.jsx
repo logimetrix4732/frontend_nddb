@@ -53,22 +53,19 @@ const MajorHighlights = () => {
   });
   return (
     <div
-      className="py-5 mb-5 mt-5"
+      className="py-5 mt-30 mb-70"
       style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "contain" }}
     >
       <div className="container-fluid text-center">
-        <p
-          className=""
+        <h2
+          className="bd-section__title"
           style={{
-            color: "#004E1C",
-            fontWeight: 800,
-            fontSize: "40px",
-            marginBottom: "30px",
+            marginBottom: "15px",
           }}
         >
           Major Highlights
-        </p>
-        <p className="mb-4" style={{ color: "#1E1E1E", fontSize: "17px" }}>
+        </h2>
+        <p className="mb-4 bd-section__paragraph">
           Key accomplishments and initiatives that showcase our commitment to
           dairy sector <br /> development.
         </p>
