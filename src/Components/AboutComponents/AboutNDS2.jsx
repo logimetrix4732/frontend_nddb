@@ -84,7 +84,7 @@ const AboutNDS2 = () => {
                 </div>
                 <div className="bd-about__features">
                   <div className="bd-about__features-title">
-                    <h4>Our Mission</h4>
+                    <h4>Our Vision</h4>
                   </div>
                   <div className="bd-about__features-list">
                     <ul>
@@ -117,7 +117,7 @@ const AboutNDS2 = () => {
                 </div>
                 <div className="bd-about__features">
                   <div className="bd-about__features-title">
-                    <h4>Our Mission</h4>
+                    <h4>Core Values</h4>
                   </div>
                   <div className="bd-about__features-list">
                     <ul>
@@ -149,7 +149,7 @@ const AboutNDS2 = () => {
                   </div>
                 </div>
               </div>
-              <a className="bd-theme__btn-1" href="about.html">
+              <a className="bd-theme__btn-1" href="/about-us">
                 get in touch
               </a>
             </div>

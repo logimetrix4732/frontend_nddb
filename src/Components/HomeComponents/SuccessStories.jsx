@@ -89,25 +89,15 @@ const SuccessStories = () => {
             className="col-md-6 d-flex flex-column "
             style={{ minHeight: "450px" }}
           >
-            <p
-              className="mt-2"
-              style={{
-                color: "#004E1C",
-                fontWeight: 800,
-                fontSize: "40px",
-                lineHeight: "40px",
-              }}
-            >
-              Success Stories
-            </p>
-            <p className="text-secondary mt-3">
+            <h2 className="bd-section__title">Success Stories</h2>
+            <p className="bd-section__paragraph  mt-3">
               Real-life transformations and impacts achieved through our
               initiatives and partnerships are at the heart of our mission to
               empower rural communities.
             </p>
 
             <ul
-              className="text-secondary mt-3 ps-3"
+              className="bd-section__paragraph mt-3 ps-3"
               style={{ listStyle: "none" }}
             >
               <li className="mb-2">

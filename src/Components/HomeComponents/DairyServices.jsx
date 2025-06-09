@@ -46,7 +46,7 @@ const DairyServices = () => {
                   }}
                 ></i>
                 <h5
-                  className="fw-semibold mt-1"
+                  className="fw-semibold mt-1 "
                   style={{
                     fontSize: "20px",
                     lineHeight: "1.2",
@@ -56,7 +56,7 @@ const DairyServices = () => {
                 </h5>
               </div>
 
-              <p className="mb-0 text-secondary">
+              <p className="mb-0 text-secondary ">
                 We are committed to strengthening farmer-owned institutions and
                 enhancing milk production, procurement, and marketing
                 infrastructure to benefit millions of dairy farmers across
