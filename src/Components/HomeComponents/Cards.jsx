@@ -51,7 +51,13 @@ const Cards = () => {
                       }}
                     />
                   </div>
-                  <div className="bd-service__content-2 transition-3">
+                  <div
+                    className="bd-service__content-2 transition-3"
+                    style={{
+                      borderBottomLeftRadius: "14px",
+                      borderBottomRightRadius: "14px",
+                    }}
+                  >
                     <h3>
                       <Link
                         to="/"
@@ -78,7 +84,13 @@ const Cards = () => {
                     </div>
                   </div>
                   <div className="bd-service__hover transition-3">
-                    <div className="bd-service__overlay">
+                    <div
+                      className="bd-service__overlay"
+                      style={{
+                        borderBottomLeftRadius: "14px",
+                        borderBottomRightRadius: "14px",
+                      }}
+                    >
                       <div className="bd-service__icon">
                         <span>
                           <img src={card.icon} alt="service-icon" />
