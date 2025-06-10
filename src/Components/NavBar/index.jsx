@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/img/logo/nddb_logo.jpg";
 
 // import gallerybg from "../src/assets/img/bg/gallery-bg.png";
@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const offcanvasRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +35,17 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleNavLinkClick = () => {
+  const offcanvasEl = offcanvasRef.current;
+  if (offcanvasEl) {
+    const bsOffcanvas = window.bootstrap.Offcanvas.getInstance(offcanvasEl);
+    if (bsOffcanvas) {
+      bsOffcanvas.hide();
+    }
+  }
+};
+
 
   return (
     <header>
@@ -170,19 +182,19 @@ const NavBar = () => {
                         </ul> */}
                       </li>
                       <li className="">
-                        <Link to="milk-producer-org">Milk Producer Org.</Link>
+                        <Link to="/milk-producer-org">Milk Producer Org.</Link>
                       </li>
                       <li className="">
-                        <Link to="semen-station">Semen Station</Link>
+                        <Link to="/semen-station">Semen Station</Link>
                       </li>
                       <li className="has-dropdown">
                         <Link>More</Link>
                         <ul className="submenu">
                           <li>
-                            <Link to="new-initiative">New Initiative</Link>
+                            <Link to="/new-initiative">New Initiative</Link>
                           </li>
                           <li>
-                            <Link to="publications">Publications</Link>
+                            <Link to="/publications">Publications</Link>
                           </li>
                           <li>
                             <Link to="/CarrerPage">Careers</Link>
@@ -416,12 +428,13 @@ const NavBar = () => {
         tabIndex="-1"
         id="mobileOffcanvas"
         aria-labelledby="mobileOffcanvasLabel"
+        ref={offcanvasRef}
       >
         <div className="offcanvas-header offcanvas__top mb-10 d-flex justify-content-between align-items-center">
           <div className="offcanvas__logo logo">
-            <a href="index.html">
+            <Link to="/" data-bs-dismiss="offcanvas">
               <img src={logo} alt="logo" style={{ height: "60px" }} />
-            </a>
+            </Link>
           </div>
           <div className="offcanvas__close">
             <button
@@ -436,15 +449,17 @@ const NavBar = () => {
         </div>
         <div className="offcanvas-body px-4">
           <nav className="nav flex-column mb-4">
-            <a className="nav-link border-bottom py-2 text-dark" href="/">
+            <Link className="nav-link border-bottom py-2 text-dark" to="/"
+            onClick={handleNavLinkClick}
+            >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               className="nav-link border-bottom py-2 text-dark"
-              href="/about-us"
+              to="/about-us" onClick={handleNavLinkClick}
             >
               About Us
-            </a>
+            </Link>
 
             <div className="border-bottom py-2">
               <div
@@ -464,66 +479,77 @@ const NavBar = () => {
                 </span>
               </div>
               <div className="collapse mt-2 ps-3" id="expertiseDropdown">
-                <a
+                <Link
                   className="nav-link text-muted d-block py-1"
-                  href="/expertise/milk"
+                  to="/expertise/milk"
+                  onClick={handleNavLinkClick}
                 >
                   Action
-                </a>
-                <a
+                </Link>
+                <Link
                   className="nav-link text-muted d-block py-1"
-                  href="/expertise/supply"
+                  to="/expertise/supply"
+                  onClick={handleNavLinkClick}
                 >
                   Another Action
-                </a>
-                <a
+                </Link>
+                <Link
                   className="nav-link text-muted d-block py-1"
-                  href="/expertise/maintenance"
+                  to="/expertise/maintenance"
+                  onClick={handleNavLinkClick}
                 >
                   More Links
-                </a>
+                </Link>
               </div>
             </div>
 
-            <a
+            <Link
               className="nav-link border-bottom py-2 text-dark"
-              href="/milk-producer"
+              to="/milk-producer-org"
+              onClick={handleNavLinkClick}
             >
               Milk Producer Org.
-            </a>
-            <a
+            </Link>
+            <Link
               className="nav-link border-bottom py-2 text-dark"
-              href="/seamen-station"
+              to="/semen-station"
+              onClick={handleNavLinkClick}
             >
               Seamen Station
-            </a>
-            <a
+            </Link>
+            <Link
               className="nav-link border-bottom py-2 text-dark"
-              href="/new-initiative"
+              to="/new-initiative"
+              onClick={handleNavLinkClick}
             >
               New Initiative
-            </a>
-            <a
+            </Link>
+            <Link
               className="nav-link border-bottom py-2 text-dark"
-              href="/publications"
+              to="/publications"
+              onClick={handleNavLinkClick}
             >
               Publications
-            </a>
-            <Link className="nav-link border-bottom py-2 text-dark" to="/CarrerPage">
+            </Link>
+            <Link className="nav-link border-bottom py-2 text-dark" to="/CarrerPage"
+              onClick={handleNavLinkClick}
+            >
               Careers
             </Link>
-            <a
+            <Link
               className="nav-link border-bottom py-2 text-dark"
-              href="/tenders"
+              to="/tenders"
+              onClick={handleNavLinkClick}
             >
               Tenders
-            </a>
-            <a
+            </Link>
+            <Link
               className="nav-link border-bottom py-2 text-dark"
-              href="/contact-us"
+              to="/contact-us"
+              onClick={handleNavLinkClick}
             >
               Contact Us
-            </a>
+            </Link>
           </nav>
 
           <div className="mt-3 mb-5">
@@ -549,34 +575,34 @@ const NavBar = () => {
           </div>
 
           <div className="d-flex gap-2 mt-4">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="btn btn-outline-success btn-sm rounded-circle d-flex align-items-center justify-content-center"
               style={{ height: "36px", width: "36px" }}
             >
               <i className="ri-facebook-fill"></i>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="btn btn-outline-success btn-sm rounded-circle d-flex align-items-center justify-content-center"
               style={{ height: "36px", width: "36px" }}
             >
               <i className="ri-twitter-fill"></i>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="btn btn-outline-success btn-sm rounded-circle d-flex align-items-center justify-content-center"
               style={{ height: "36px", width: "36px" }}
             >
               <i className="ri-youtube-fill"></i>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="btn btn-outline-success btn-sm rounded-circle d-flex align-items-center justify-content-center"
               style={{ height: "36px", width: "36px" }}
             >
               <i className="ri-linkedin-box-fill"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

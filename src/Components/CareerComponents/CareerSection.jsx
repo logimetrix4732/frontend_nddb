@@ -34,8 +34,6 @@ const CareerSection = () => {
         onClose={handleFormClose}
         />
 
-      {/* <MainHeading /> */}
-
       {/* <CarrerAbout /> */}
 
       <div className="job">

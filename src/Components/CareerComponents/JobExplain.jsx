@@ -32,7 +32,7 @@ const JobExplain = ({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
           style={{
-            backgroundColor: "#f76754",
+            backgroundColor: "#1FC25A",
             padding: 5,
           }}
         >
@@ -65,7 +65,7 @@ const JobExplain = ({
             </IconButton>
 
             <span
-              className="th-btn"
+              className="th-btn btn btn-outline-success"
               onClick={
                 ApplicantsTrue === true ||
                 new Date(selectedJob.EndDate) < new Date()

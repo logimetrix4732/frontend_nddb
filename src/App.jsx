@@ -10,6 +10,14 @@ import Contact from "./Pages/Contact";
 import Blog from "./Pages/Blog";
 import OurExperties from "./Pages/OurExperties";
 import CarrerPage from "./Pages/CarrerPage";
+import MilkProducerOrg from "./Pages/MilkProducerOrg";
+import SemenStation from "./Pages/SemenStation";
+import NewInitiative from "./Pages/NewInitiative";
+import Publications from "./Pages/Publications";
+import Tenders from "./Pages/Tenders";
+import LoginPage from "./Pages/AdminLogin";
+import AdminDashbord from "./Admin/AdminDashbord";
+
 
 function App() {
 
@@ -32,6 +40,13 @@ function App() {
         <Route path="/our-experties" element={<OurExperties />} />
         <Route path="/CarrerPage" element={<CarrerPage />} />
         <Route path="/CarrerPage/:id" element={<CarrerPage />} />
+        <Route path="/milk-producer-org" element={<MilkProducerOrg />} />
+        <Route path="/semen-station" element={<SemenStation />} />
+        <Route path="/new-initiative" element={<NewInitiative />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/tenders" element={<Tenders />} />
+        <Route path="/adminlogin" element={<LoginPage />} />
+        <Route path="/adminDashboard" element={<AdminDashbord />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>

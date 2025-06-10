@@ -2,8 +2,8 @@ import React from "react";
 import { Box, Chip } from "@mui/material";
 
 const chipStyle = {
-  bgcolor: "#e3f2fd",
-  color: "#1976d2",
+  bgcolor: "#08A440",
+  color: "#fff",
   fontWeight: 500,
   borderRadius: "7px",
   px: 1,
@@ -32,7 +32,7 @@ const JobOverView = ({
   return (
     <div>
       <div
-        className="th-btn"
+        className="th-btn btn btn-outline-success"
         style={{ cursor: "pointer", marginBottom: "10px" }}
         onClick={showDetails ? handleCardBack : ""}
       >
@@ -66,12 +66,12 @@ const JobOverView = ({
                 style={{
                   width: "40px",
                   height: "40px",
-                  backgroundColor: "#2e2882",
+                  backgroundColor: "#08A440",
                   padding: "8px",
                   borderRadius: "5px",
                 }}
               >
-                <g fill="#feb0a5">
+                <g fill="#000">
                   <path d="M256 92.5l127.7 91.6L512 92 383.7 0 256 91.5 128.3 0 0 92l128.3 92zm0 0M256 275.9l-127.7-91.5L0 276.4l128.3 92L256 277l127.7 91.5 128.3-92-128.3-92zm0 0" />
                   <path d="M127.7 394.1l128.4 92 128.3-92-128.3-92zm0 0" />
                 </g>

@@ -19,7 +19,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Slide } from "@mui/material";
 import carrerLoder from "../../assets/img/normal/carrerLoder.gif";
 import checkStatus from "../../assets/img/normal/checkStatus.gif";
-// import { getFetch } from "../../api/Api";
+import { apiGet } from "../../utils/apiClient";
+// import { apiGet } from "../";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -66,12 +67,12 @@ const CarrerForm = ({
     const { jobId, phone } = statusForm;
 
     try {
-      const url = `${import.meta.env.VITE_API_URL_LOCAL}/getApplicationStatus/?PhoneNumber=${phone}&JobId=${jobId}`;
-      const response = await getFetch(url);
+      const url = `/getApplicationStatus/?PhoneNumber=${phone}&JobId=${jobId}`;
+      const response = await apiGet(url);
 
-      console.log(response);
-      if (response.data.custom) {
-        setApplicationStatus(response.data.data.Status);
+      console.log(response.data);
+      if (response.data) {
+        setApplicationStatus(response.data.Status);
       } else {
         setApplicationStatus(response.response.data.message);
       }
@@ -105,7 +106,7 @@ const CarrerForm = ({
         transitionDuration={300}
         sx={{
           "& .MuiDrawer-paper": {
-            width: { xs: "90%", sm: "70%", md: "40%", lg: "20%" },
+            width: { xs: "90%", sm: "80%", md: "40%", lg: "30%" },
             height: { xs: "auto", md: "100%" },
             maxHeight: { xs: "80vh", md: "100%" },
             boxShadow: 4,
@@ -168,9 +169,10 @@ const CarrerForm = ({
             fullWidth
             size="small"
             variant="outlined"
-            name="name"
-            value={formData.name}
+            name="Name"
+            value={formData.Name}
             onChange={handleChange}
+            placeholder="First Name"
             error={!!errors.name}
             helperText={errors.name}
             sx={{ mb: 2, backgroundColor: "white" }}
@@ -181,9 +183,10 @@ const CarrerForm = ({
             fullWidth
             size="small"
             variant="outlined"
-            name="lastName"
-            value={formData.lastName}
+            name="LastName"
+            value={formData.LastName}
             onChange={handleChange}
+            placeholder="Last Name"
             error={!!errors.lastName}
             helperText={errors.lastName}
             sx={{ mb: 2, backgroundColor: "white" }}
@@ -195,8 +198,9 @@ const CarrerForm = ({
             variant="outlined"
             type="email"
             size="small"
-            name="email"
-            value={formData.email}
+            name="Email"
+            value={formData.Email}
+            placeholder=" Enter Email"
             onChange={handleChange}
             error={!!errors.email}
             helperText={errors.email}
@@ -209,20 +213,67 @@ const CarrerForm = ({
             variant="outlined"
             type="tel"
             size="small"
-            name="phone"
-            value={formData.phone}
+            name="PhoneNumber"
+            value={formData.PhoneNumber}
+            placeholder="Enter Phone Number"
             onChange={handleChange}
             error={!!errors.phone}
             helperText={errors.phone}
             sx={{ mb: 2, backgroundColor: "white" }}
           />
+
+          <label>Current Role</label>
+          <TextField
+            fullWidth
+            variant="outlined"
+            type="tel"
+            size="small"
+            name="CurrentRole"
+            value={formData.CurrentRole}
+            placeholder="Team Lead"
+            onChange={handleChange}
+            // error={!!errors.phone}
+            // helperText={errors.phone}
+            sx={{ mb: 2, backgroundColor: "white" }}
+          />
+
+          <label>Current Company</label>
+          <TextField
+            fullWidth
+            variant="outlined"
+            type="tel"
+            size="small"
+            name="CurrentCompany"
+            value={formData.CurrentCompany}
+            placeholder="Enter Company Name"
+            onChange={handleChange}
+            // error={!!errors.phone}
+            // helperText={errors.phone}
+            sx={{ mb: 2, backgroundColor: "white" }}
+          />
+
+          <label>Current CTC</label>
+          <TextField
+            fullWidth
+            variant="outlined"
+            type="tel"
+            size="small"
+            name="CurrentCTC"
+            value={formData.CurrentCTC}
+            placeholder="5,00,000"
+            onChange={handleChange}
+            // error={!!errors.phone}
+            // helperText={errors.phone}
+            sx={{ mb: 2, backgroundColor: "white" }}
+          />
+
           <TextField
             fullWidth
             multiline
             variant="outlined"
-            placeholder="Write a message..."
-            name="message"
-            value={formData.message}
+            name="CoverLetter"
+            value={formData.CoverLetter}
+            placeholder="Cover Letter"
             onChange={handleChange}
             sx={{ mb: 2, "& .MuiOutlinedInput-root": { borderRadius: "10px" } }}
           />

@@ -86,7 +86,7 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
               >
                 <Box
                   sx={{
-                    bgcolor: "#3730a3",
+                    bgcolor: "#08A440",
                     width: 48,
                     height: 48,
                     borderRadius: 2,
@@ -180,8 +180,8 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
                   label={job.JobType || "Full-Time"}
                   size="small"
                   sx={{
-                    bgcolor: "#e3f2fd",
-                    color: "#1976d2",
+                    bgcolor: "#08A440",
+                    color: "#fff",
                     fontWeight: 500,
                     borderRadius: "16px",
                     px: 1,
@@ -191,8 +191,8 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
                   label={job.JobExperience || "Experience Required"}
                   size="small"
                   sx={{
-                    bgcolor: "#e3f2fd",
-                    color: "#1976d2",
+                    bgcolor: "#08A440",
+                    color: "#fff",
                     fontWeight: 500,
                     borderRadius: "16px",
                     px: 1,
@@ -202,8 +202,8 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
                   label={job.JobId || "Job Id"}
                   size="small"
                   sx={{
-                    bgcolor: "#e3f2fd",
-                    color: "#1976d2",
+                    bgcolor: "#08A440",
+                    color: "#fff",
                     fontWeight: 500,
                     borderRadius: "16px",
                     px: 1,
@@ -213,7 +213,7 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
 
               <Stack direction="row" spacing={1}>
                 <div
-                  className="th-btn"
+                  className="th-btn btn btn-outline-success"
                   onClick={() => {
                     if (admin) {
                       handleEditJob(job);
