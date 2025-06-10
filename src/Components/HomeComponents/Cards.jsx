@@ -25,7 +25,7 @@ const cardsData = [
   {
     img: card3,
     icon: "assets/img/service/icon/3.png",
-    title: "Calf Starter Feed",
+    title: "Calf Starter Feed in",
     description:
       "Specially formulated feed for calves to ensure proper growth and development.",
     number: "03",
@@ -58,7 +58,7 @@ const Cards = () => {
                         style={{
                           fontSize:
                             window.innerWidth <= 480
-                              ? "14px"
+                              ? "30px"
                               : window.innerWidth <= 768
                               ? "18px"
                               : "24px",

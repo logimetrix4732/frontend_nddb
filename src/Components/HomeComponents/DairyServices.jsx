@@ -82,7 +82,15 @@ const DairyServices = () => {
                     fontSize: "22px",
                   }}
                 ></i>
-                <h5 className="fw-semibold mb-0">Our Vision</h5>
+                <h5
+                  className="fw-semibold mb-0"
+                  style={{
+                    fontSize: "20px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Our Vision
+                </h5>
               </div>
               <p className="mb-0 text-secondary">
                 We provide end-to-end solutions for dairy development, including

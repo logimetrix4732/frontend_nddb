@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import successStory from "../../Images/successStories.jpg";
 import bgCow from "../../Images/bg-cow.png";
-import "./style.css";
+
 const SuccessStories = () => {
   const [stories] = useState([
     {
@@ -36,7 +36,12 @@ const SuccessStories = () => {
   };
 
   return (
-    <section className="container-fluid section-container px-3 position-relative mb-50">
+    <section
+      className="container-fluid px-3 position-relative mb-50"
+      style={{
+        overflowX: window.innerWidth < 768 ? "none" : "hidden",
+      }}
+    >
       {/* Cow Image - Background Layer */}
       <div
         className="position-absolute bottom-0 end-0 d-none d-md-block"
@@ -97,25 +102,17 @@ const SuccessStories = () => {
               className="bd-section__paragraph mt-3 ps-3"
               style={{ listStyle: "none" }}
             >
-              <li className="mb-2 d-flex align-items-start">
-                <i className="ri-checkbox-circle-line text-success me-2 mt-1"></i>
-                <span>
-                  Over 50,000 farmers impacted through sustainable dairy
-                  programs.
-                </span>
+              <li className="mb-2">
+                <i className="ri-checkbox-circle-line text-success me-2"></i>
+                Over 50,000 farmers impacted through sustainable dairy programs.
               </li>
-              <li className="mb-2 d-flex align-items-start">
-                <i className="ri-checkbox-circle-line text-success me-2 mt-1"></i>
-                <span>
-                  3x increase in household income in supported regions.
-                </span>
+              <li className="mb-2">
+                <i className="ri-checkbox-circle-line text-success me-2"></i>
+                3x increase in household income in supported regions.
               </li>
-              <li className="mb-2 d-flex align-items-start">
-                <i className="ri-checkbox-circle-line text-success me-2 mt-1"></i>
-                <span>
-                  Women-led dairy cooperatives are driving socio-economic
-                  change.
-                </span>
+              <li className="mb-2">
+                <i className="ri-checkbox-circle-line text-success me-2"></i>
+                Women-led dairy cooperatives are driving socio-economic change.
               </li>
             </ul>
 

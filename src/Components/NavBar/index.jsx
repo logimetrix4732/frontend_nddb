@@ -108,7 +108,7 @@ const NavBar = () => {
                     className=""
                     style={{
                       padding: hasScrolled ? "0 8px" : "17px 15px 15px 15px",
-                      borderRadius: "20px 20px 20px 20px",
+                      borderRadius: "10px 10px 10px 10px",
                       width: "100%",
                       transition: "padding 0.3s ease",
                     }}
