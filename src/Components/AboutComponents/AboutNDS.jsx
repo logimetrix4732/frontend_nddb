@@ -8,14 +8,17 @@ const BriefOfNDS = () => {
           <div className="col-lg-6">
             <div className="bd-about__content-box mb-60">
               <div className="bd-section__title-wrapper mb-25">
-                <span className="bd-sub__title">About Us</span>
+                <span className="bd-sub__title">About NDS</span>
                 <h2 className="bd-section__title s-2 mb-30">
-                  Know About Our Farm &amp; History
+                  Empowering Dairy Farmers, Strengthening Rural India
                 </h2>
                 <p className="bd-section__paragraph">
-                  We have been working in this industry for more than 30 years
-                  with trust and honesty. All hands must be on deck if we are to
-                  achieve our goal of improving global nutrition.
+                  NDDB Dairy Services (NDS) is a not-for-profit company
+                  established by the National Dairy Development Board. We
+                  support the formation and management of producer-owned
+                  enterprises to enhance milk production, ensure fair value for
+                  farmers, and deliver sustainable dairy development across
+                  India.
                 </p>
               </div>
               <div className="bd-about__award mb-40">
@@ -23,7 +26,11 @@ const BriefOfNDS = () => {
                   <img src="assets/img/about/award-icon.png" alt="award-icon" />
                 </div>
                 <div className="bd-about__award-content-2">
-                  <h3></h3>
+                  <h3>Serving 9.5+ Lakh Dairy Farmers</h3>
+                  <p>
+                    Active in 9 states, with 19+ Producer Companies and over 4.2
+                    million litres of daily milk procurement.
+                  </p>
                 </div>
               </div>
             </div>

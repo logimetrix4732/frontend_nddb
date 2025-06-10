@@ -46,8 +46,8 @@ const Cards = () => {
                       src={card.img}
                       alt="service-thumb"
                       style={{
-                        borderTopLeftRadius: "6px",
-                        borderTopRightRadius: "6px",
+                        borderTopLeftRadius: "14px",
+                        borderTopRightRadius: "14px",
                       }}
                     />
                   </div>

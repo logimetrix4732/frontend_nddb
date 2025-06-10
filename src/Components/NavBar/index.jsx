@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/img/logo/nddb_logo.jpg";
-
-// import gallerybg from "../src/assets/img/bg/gallery-bg.png";
-// import gallery01 from "../src/assets/img/gallery/gallery-01.jpg";
-// import gallery02 from "../src/assets/img/gallery/gallery-02.jpg";
-// import gallery03 from "../src/assets/img/gallery/gallery-03.jpg";
-// import gallery04 from "../src/assets/img/gallery/gallery-04.jpg";
-
 import gallery06 from "../../../src/assets/img/gallery/thumb/06.jpg";
 import gallery07 from "../../../src/assets/img/gallery/thumb/07.jpg";
 import gallery08 from "../../../src/assets/img/gallery/thumb/08.jpg";
@@ -38,60 +31,22 @@ const NavBar = () => {
   return (
     <header>
       {/* Header top area start */}
-      <div className="bd-header__top-area pg-bg d-none d-md-block">
+      <div
+        className="bd-header__top-area pg-bg d-none d-md-block"
+        style={{ background: "#5b8c51" }}
+      >
         <div className="container">
           <div className="row align-items-center gx-0">
             <div className="col-xl-8 col-lg-8 col-md-9 col-8">
               <div className="bd-header__contact-spacing">
                 <div className="bd-header__contact">
                   <ul>
-                    <li>
-                      <a href="mailto:info@webmail.com">
-                        <i className="fa-solid fa-envelope-open" />
-                        enquiry@nddbdairyservices.com
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:89789790899">
-                        <i className="fa-solid fa-phone" />
-                        +91 709 292 2421
-                      </a>
-                    </li>
+                    <li></li>
+                    <li></li>
                   </ul>
                 </div>
               </div>
             </div>
-            {/* <div className="col-xl-4 col-lg-4  col-md-3 col-4">
-              <div className="bd-header__social text-end">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i className="fa-brands fa-facebook-f" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa-brands fa-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa-brands fa-behance-square" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa-brands fa-youtube" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa-brands fa-linkedin" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -130,44 +85,6 @@ const NavBar = () => {
                       </li>
                       <li className="">
                         <Link to="/our-experties">Our Experties</Link>
-                        {/* <ul className="submenu">
-                          <li>
-                            <Link to="team">Team</Link>
-                          </li>
-                          <li>
-                            <Link to="team-details">Team Details</Link>
-                          </li>
-                          <li>
-                            <Link to="gallary">Gallery</Link>
-                          </li>
-                          <li>
-                            <Link to="faq">Faq</Link>
-                          </li>
-                          <li>
-                            <Link to="shop">Shop</Link>
-                          </li>
-                          <li>
-                            <Link to="product-details">Product Details</Link>
-                          </li>
-                          <li>
-                            <Link to="wishlist">Wishlist</Link>
-                          </li>
-                          <li>
-                            <Link to="cart">Cart</Link>
-                          </li>
-                          <li>
-                            <Link to="checkout">Checkout</Link>
-                          </li>
-                          <li>
-                            <Link to="login">Login</Link>
-                          </li>
-                          <li>
-                            <Link to="register">Register</Link>
-                          </li>
-                          <li>
-                            <Link to="error">404 Page</Link>
-                          </li>
-                        </ul> */}
                       </li>
                       <li className="">
                         <Link to="milk-producer-org">Milk Producer Org.</Link>
@@ -205,19 +122,8 @@ const NavBar = () => {
             </div>
             <div className="col-xl-2 col-lg-1 col-md-4 col-8">
               <div className="bd-header__right d-flex align-items-center justify-content-end">
-                {/* <div className="bd-header__action">
-                  <div className="bd-header__action-icon">
-                    <button className="shoping__toggle">
-                      <img
-                        src="assets/img/icon/cart-icon.png"
-                        alt="cart-icon"
-                      />
-                    </button>
-                  </div>
-                </div> */}
                 <div className="bd-header__hamburger">
                   <div className="bd-header__hamburger-icon">
-                    {/* Large Screen Offcanvas Button (Gallery & Contact Info) */}
                     <button
                       className="side-toggle d-none d-lg-block"
                       data-bs-toggle="offcanvas"
@@ -231,7 +137,6 @@ const NavBar = () => {
                       />
                     </button>
 
-                    {/* Small Screen Offcanvas Button (Mobile Menu Links) */}
                     <button
                       className="side-toggle d-block d-lg-none"
                       data-bs-toggle="offcanvas"

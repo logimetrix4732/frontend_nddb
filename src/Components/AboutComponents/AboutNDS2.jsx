@@ -43,9 +43,18 @@ const AboutNDS2 = () => {
                   Know About Our Farm &amp; History
                 </h2>
                 <p className="bd-section__paragraph">
-                  We have been working in this industry for more than 30 years
-                  with trust and honesty. All hands must be on deck if we are to
-                  achieve our goal of improving global nutrition.
+                  NDDB Dairy Services is a wholly-owned subsidiary of the
+                  National Dairy Development Board (NDDB). We are committed to
+                  strengthening the dairy sector by supporting the formation and
+                  growth of Producer Companies across India. Our goal is to
+                  empower smallholder dairy farmers through sustainable,
+                  farmer-owned institutions.
+                  <br />
+                  <br />
+                  With more than two decades of field experience, we provide
+                  strategic and operational support to help improve
+                  productivity, ensure fair market access, and create long-term
+                  livelihoods in rural areas.
                 </p>
               </div>
               <div className="bd-about__features-wrapper mb-25">
@@ -60,7 +69,7 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          High-quality work
+                          Support Producer Companies
                         </div>
                       </li>
                       <li>
@@ -68,7 +77,7 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          Straightforward pricing
+                          Improve animal productivity
                         </div>
                       </li>
                       <li>
@@ -76,7 +85,7 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          Rapid response times
+                          Empower farmer enterprises
                         </div>
                       </li>
                     </ul>
@@ -93,7 +102,7 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          High-quality work
+                          Strengthen rural ecosystems
                         </div>
                       </li>
                       <li>
@@ -101,7 +110,7 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          Straightforward pricing
+                          Ensure fair incomes
                         </div>
                       </li>
                       <li>
@@ -109,7 +118,7 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          Rapid response times
+                          Scale cooperative models
                         </div>
                       </li>
                     </ul>
@@ -126,7 +135,7 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          High-quality work
+                          Collaboration and trust
                         </div>
                       </li>
                       <li>
@@ -134,7 +143,7 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          Straightforward pricing
+                          Integrity and transparency
                         </div>
                       </li>
                       <li>
@@ -142,16 +151,13 @@ const AboutNDS2 = () => {
                           <i className="fa-regular fa-check" />
                         </div>
                         <div className="features__list-title">
-                          Rapid response times
+                          Innovation and excellence
                         </div>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <a className="bd-theme__btn-1" href="/about-us">
-                get in touch
-              </a>
             </div>
           </div>
         </div>

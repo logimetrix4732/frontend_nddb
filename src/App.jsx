@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
 import PageNotFound from "./Pages/PageNotFound";
@@ -10,9 +10,16 @@ import Blog from "./Pages/Blog";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
+    const isFirstLoad = useRef(true);
+
     useEffect(() => {
+      if (isFirstLoad.current) {
+        isFirstLoad.current = false;
+        return;
+      }
       window.scrollTo(0, 0);
     }, [pathname]);
+
     return null;
   };
 

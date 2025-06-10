@@ -1,7 +1,5 @@
 import React from "react";
-import ChairmanSir1 from "../../Images/Chairman-Sir-01.png";
 import ChairmanSir from "../../Images/BoardofDirectorsImg/Chairman-Sir-01.png";
-
 const AboutNDS1 = () => {
   return (
     <section className="bd-about__area pb-40">
@@ -10,9 +8,13 @@ const AboutNDS1 = () => {
           <div className="col-lg-6">
             <div className="bd-about__thumb w-img mb-60">
               <img
-                src={ChairmanSir1}
+                src="assets/img/about/about-thumb-01.jpg"
                 alt="about-thumb"
-                style={{ borderRadius: "14px" }}
+                style={{
+                  width: "645px",
+                  height: "500",
+                  borderRadius: "6px",
+                }}
               />
             </div>
           </div>
@@ -41,7 +43,7 @@ const AboutNDS1 = () => {
                     style={{
                       height: "60px",
                       width: "60px",
-                      borderRadius: "4px",
+                      borderRadius: "3px",
                     }}
                   />
                   <div className="bd-about__author-text">
