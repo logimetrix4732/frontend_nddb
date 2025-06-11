@@ -29,7 +29,7 @@ const LoginPage = () => {
 
     // Redirect after delay
     setTimeout(() => {
-      navigate("/adminDashboard");
+      navigate("/adminPost");
     }, 1000);
   } catch (error) {
     console.log(error);

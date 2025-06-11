@@ -4,29 +4,20 @@ import image2 from "../../Images/wind.png";
 
 const DairyServices = () => {
   return (
-    <div className="dairy-services-section position-relative overflow-hidden mb-5 mt-5">
+    <div className="dairy-services-section position-relative overflow-hidden  mt-50 mb-50">
       <div className="container py-5">
         <div className="row align-items-center">
           {/* Left Column */}
           <div className="col-lg-7 mb-5 mb-lg-0">
-            <p
-              className="section-title"
+            <h2
+              className="bd-section__title"
               style={{
-                fontWeight: 800,
-                color: "#004E1C",
-                fontSize: "40px",
-                marginBottom: "30px",
-                lineHeight: "40px",
+                marginBottom: "15px",
               }}
             >
               NDDB Dairy Services
-            </p>
-            <p
-              className="mb-4"
-              style={{
-                color: "#1E1E1E",
-              }}
-            >
+            </h2>
+            <p className="bd-section__paragraph mb-4">
               NDDB Dairy Services (NDS), a Section 8 company registered under
               the Companies Act, is a wholly owned subsidiary of the National
               Dairy Development Board (NDDB). It functions as the delivery arm
@@ -54,10 +45,18 @@ const DairyServices = () => {
                     fontSize: "22px",
                   }}
                 ></i>
-                <h5 className="fw-semibold mb-0">Our Mission</h5>
+                <h5
+                  className="fw-semibold mt-1 "
+                  style={{
+                    fontSize: "20px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Our Mission
+                </h5>
               </div>
 
-              <p className="mb-0 text-secondary">
+              <p className="mb-0 text-secondary ">
                 We are committed to strengthening farmer-owned institutions and
                 enhancing milk production, procurement, and marketing
                 infrastructure to benefit millions of dairy farmers across
@@ -83,7 +82,15 @@ const DairyServices = () => {
                     fontSize: "22px",
                   }}
                 ></i>
-                <h5 className="fw-semibold mb-0">Our Vision</h5>
+                <h5
+                  className="fw-semibold mb-0"
+                  style={{
+                    fontSize: "20px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Our Vision
+                </h5>
               </div>
               <p className="mb-0 text-secondary">
                 We provide end-to-end solutions for dairy development, including

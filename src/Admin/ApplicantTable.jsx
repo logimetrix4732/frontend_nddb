@@ -74,6 +74,10 @@ export default function ApplicantTable({
     setPage(0);
   };
 
+  React.useEffect(()=>{
+    console.log('rows data',rows)
+  })
+
   const filteredRows = rows?.filter((row) =>
     row.Name.toLowerCase().includes(searchTerm.toLowerCase())
   );

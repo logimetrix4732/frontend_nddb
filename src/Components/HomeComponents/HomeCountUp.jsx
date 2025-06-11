@@ -1,95 +1,136 @@
 import React from "react";
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./style.css"; // Import custom CSS
 
-const counters = [
+const newsItems = [
   {
-    id: 1,
-    title: "States Covered",
-    end: 9,
-    suffix: "",
-    description: "Presence across Indian states",
-    icon: "assets/img/counter/counter-01.png",
+    img: "assets/img/news/layout/news-09.jpg",
+    date: "Jan 20, 2022",
+    author: "Executive Director Operations",
+    name: "Shri S Regupathi",
+    title:
+      "Shri S Regupathi has over three decades of experience in finance and accounting and is cur",
   },
   {
-    id: 2,
-    title: "Districts Covered",
-    end: 147,
-    suffix: "",
-    description: "Extensive district-wise reach",
-    icon: "assets/img/counter/counter-02.png",
+    img: "assets/img/news/layout/news-09.jpg",
+    date: "Jan 20, 2022",
+    author: "Executive Director Operations",
+    name: "Shri S Regupathi",
+    title:
+      "Shri S Regupathi has over three decades of experience in finance and accounting and is cur",
   },
   {
-    id: 3,
-    title: "Villages Covered",
-    end: 22.8,
-    suffix: "K",
-    description: "Empowering rural communities",
-    icon: "assets/img/counter/counter-03.png",
+    img: "assets/img/news/layout/news-09.jpg",
+    date: "Jan 20, 2022",
+    author: "Executive Director Operations",
+    name: "Shri S Regupathi",
+    title:
+      "Shri S Regupathi has over three decades of experience in finance and accounting and is cur",
   },
   {
-    id: 4,
-    title: "Associated Dairy Farmers",
-    end: 9.5,
-    suffix: "L",
-    description: "Strong farmer participation",
-    icon: "assets/img/counter/counter-04.png",
+    img: "assets/img/news/layout/news-09.jpg",
+    date: "Jan 20, 2022",
+    author: "Executive Director Operations",
+    name: "Shri S Regupathi",
+    title:
+      "Shri S Regupathi has over three decades of experience in finance and accounting and is cur",
+  },
+  {
+    img: "assets/img/news/layout/news-09.jpg",
+    date: "Jan 20, 2022",
+    author: "Executive Director Operations",
+    name: "Shri S Regupathi",
+    title:
+      "Shri S Regupathi has over three decades of experience in finance and accounting and is cur",
   },
 ];
 
 const HomeCountUp = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
-
   return (
-    <div className="bd-counter__area pb-40" ref={ref}>
-      <div className="container">
-        <div className="bd-counter__border" />
-        <div className="row">
-          {counters.map((item) => (
-            <div key={item.id} className="col-xl-3 col-lg-6 col-md-6 mb-30">
-              <div className="bd-counter__item p-relative">
-                <div className="bd-counter__inner">
-                  <div className="bd-counter__content">
-                    <span
-                      className="bd-counter__title"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "12px",
-                        marginBottom: "12px",
-                      }}
-                    >
-                      <img
-                        src={item.icon}
-                        alt="counter-icon"
-                        style={{ width: "auto", height: "30px" }}
-                      />
-                      {item.title}
-                    </span>
-                    <div className="bd-counter__number">
-                      {inView ? (
-                        <CountUp
-                          end={item.end}
-                          duration={2}
-                          decimals={item.end % 1 !== 0 ? 1 : 0}
-                        />
-                      ) : (
-                        0
-                      )}
-                      <span>{item.suffix}</span>
+    <section className="bd-news__area  pb-90">
+      <div className="container position-relative">
+        <div className="bd-news__header flex-between mb-25">
+          <h2 className="bd-section__title">
+            Meet Our Visionary Board <br />
+            of Directors
+          </h2>
+          {/* Navigation arrows side by side */}
+          <div className="bd-news__nav-arrows">
+            <div className="custom-swiper-prev">
+              <i className="ri-arrow-left-line"></i>
+            </div>
+            <div className="custom-swiper-next">
+              <i className="ri-arrow-right-line"></i>
+            </div>
+          </div>
+        </div>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true} // ✅ loop on
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          navigation={{
+            nextEl: ".custom-swiper-next",
+            prevEl: ".custom-swiper-prev",
+          }}
+          onSwiper={(swiper) => {
+            setTimeout(() => {
+              swiper.params.navigation.prevEl = ".custom-swiper-prev";
+              swiper.params.navigation.nextEl = ".custom-swiper-next";
+              swiper.navigation.destroy();
+              swiper.navigation.init();
+              swiper.navigation.update();
+            });
+          }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            576: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1200: { slidesPerView: 4 },
+          }}
+        >
+          {newsItems.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bd-news__item mb-30">
+                <div className="bd-news__thumb-2 w-img">
+                  <a href="news-details.html">
+                    <img src={item.img} alt="news-thumb" />
+                  </a>
+                </div>
+                <div className="bd-news__content-2">
+                  <h3
+                    className="bd-news__title-2"
+                    dangerouslySetInnerHTML={{
+                      __html: `<a href="news-details.html">${item.name}</a>`,
+                    }}
+                  />
+                  <span className="bd-news__sub-title">{item.title}</span>
+
+                  <div className="bd-news__border">
+                    <div className="bd-news__meta">
+                      <div className="bd-news__meta-item">
+                        <span>
+                          <i className="fa-solid fa-user" /> {item.author}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <p style={{ marginTop: "-12px" }}>{item.description}</p>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ImageHeader from "../Components/Shared/ImageHeader";
 import JobCard from "../Components/CareerComponents/JobCard";
-import { apiGet } from "../utils/apiClient";
+import { apiGet, apiPost, apiPut } from "../utils/apiClient";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ConfirmationModal from "./ConfirmationModal";
@@ -10,9 +10,10 @@ import JobExplain from "../Components/CareerComponents/JobExplain";
 import ApplicantTable from "./ApplicantTable";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
-import "../Components/CareerComponents/career.css"
+import "../Components/CareerComponents/career.css";
+import axiosInstance from "../utils/axiosInstance";
 
-const AdminDashbord = () => {
+const AdminPost = () => {
   const [open, setOpen] = useState(false);
   const [jobData, setJobData] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
@@ -48,7 +49,6 @@ const AdminDashbord = () => {
         toast.error("Failed to load job data.");
       }
     } catch (err) {
-      console.error("Fetch error:", err);
       toast.error("An error occurred while fetching jobs.");
     }
   };
@@ -92,20 +92,19 @@ const AdminDashbord = () => {
     if (validateForm()) {
       setLoading(true);
       try {
-        const response = await postFetchData(
-          `${import.meta.env.VITE_API_URL_LOCAL}/createJob`,
-          {
-            ...formData,
-            JobResponsibilities: responsibilities,
-            JobQualifications: qualifications,
-          }
-        );
+        const response = await apiPost("/createJob", {
+          ...formData,
+          JobResponsibilities: responsibilities,
+          JobQualifications: qualifications,
+        });
+
         toast.success(response.message, { autoClose: 2000 });
         handleFormClose();
         fetchData();
       } catch (error) {
-        console.error("Error posting job:", error);
-        toast.error(error.response.data.message, { autoClose: 2000 });
+        toast.error(error?.response?.data?.message || "Failed to post job.", {
+          autoClose: 2000,
+        });
       } finally {
         setLoading(false);
       }
@@ -114,7 +113,6 @@ const AdminDashbord = () => {
 
   const handleUpdateJob = async () => {
     if (!editID) {
-      console.error("Job ID is required for update!");
       return;
     }
 
@@ -124,20 +122,16 @@ const AdminDashbord = () => {
       JobQualifications: qualifications,
     };
 
-    const url = `${import.meta.env.VITE_API_URL_LOCAL}/updateJob/${editID}`;
-
     try {
-      const response = await putFetch(url, updatedData);
-      if (response?.status === 200) {
-        toast.success(response.data.message, { autoClose: 2000 });
-        handleFormClose();
-        fetchData();
-      } else {
-        toast.error(response.data.message, { autoClose: 2000 });
-      }
+      const response = await apiPut(`/updateJob/${editID}`, updatedData);
+
+      toast.success(response.message, { autoClose: 2000 });
+      handleFormClose();
+      fetchData();
     } catch (error) {
-      console.error("Error updating job:", error);
-      toast.error(error.response.data.message, { autoClose: 2000 });
+      toast.error(error?.response?.data?.message || "Failed to update job.", {
+        autoClose: 2000,
+      });
     }
   };
 
@@ -243,7 +237,6 @@ const AdminDashbord = () => {
   });
 
   const handleOpen = (id, status, scheduledDate) => {
-    console.log("sdfsf");
     setApproveOpen({
       status: true,
       data: { id, status, scheduledDate },
@@ -257,39 +250,46 @@ const AdminDashbord = () => {
     });
   };
 
-    const [appliedList, setAppliedList] = useState([]);
+  const [appliedList, setAppliedList] = useState([]);
 
-      const fetchAppliedList = async (id) => {
-    const Applyid = selectedJob?.id ? selectedJob?.id : id;
-    const url = `${import.meta.env.VITE_API_URL_LOCAL}/appliedList/${Applyid}`;
+  const fetchAppliedList = async (id) => {
+    const Applyid = selectedJob?.id || id;
+    const url = `/appliedList/${Applyid}`;
+
     try {
-      const response = await getFetch(url);
-      if (response?.status === 200) {
-        setAppliedList(response.data.data);
+      const response = await apiGet(url);
+      if (response) {
+        setAppliedList(response.data || []);
       } else {
         toast.error("Error fetching data", { autoClose: 2000 });
       }
     } catch (error) {
-      toast.error("Error fetching data", { autoClose: 2000 });
+      console.error("Fetch error:", error);
+      toast.error(error?.response?.data?.message || "Error fetching data", {
+        autoClose: 2000,
+      });
     }
   };
 
   const handleStatusChange = async () => {
     const { id, status, scheduledDate } = approveOpen.data;
+
     try {
-      const url = `${import.meta.env.VITE_API_URL_LOCAL}/updateStatus/${selectedJob.id}`;
-      const response = await putFetchData(url, {
+      const url = `/updateStatus/${selectedJob.id}`;
+      const response = await apiPut(url, {
         ApplicantId: id,
         Status: status,
         ScheduledDate: scheduledDate,
       });
-      if (response?.status === 200) {
-        console.log(response);
-        toast.success(response.data.message, { autoClose: 2000 });
+
+      if (response) {
+        toast.success(response.message || "Status updated successfully", {
+          autoClose: 2000,
+        });
         fetchAppliedList(id);
         handleClose();
       } else {
-        toast.error(response?.message || "Failed to update status.", {
+        toast.error(response.message || "Failed to update status.", {
           autoClose: 2000,
         });
       }
@@ -301,41 +301,20 @@ const AdminDashbord = () => {
   };
   const userToken = localStorage.getItem("token");
 
-    const downloadResume = async (id, name) => {
-    console.log("Downloading resume...");
-
-    const url = `${import.meta.env.VITE_API_URL_LOCAL}/downloadResume/${id}?JobId=${selectedJob.id}`;
+  const downloadResume = async (id, name) => {
+    const url = `/downloadResume/${id}?JobId=${selectedJob.id}`;
 
     try {
-      const response = await fetch(url, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${userToken}`,
-          "Content-Type": "application/json",
-        },
+      const response = await axiosInstance.get(url, {
+        responseType: "blob", // This is required to handle binary file
       });
 
-      console.log("Response Headers:", response.headers.get("content-type"));
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error("Error Response Data:", errorData);
-        if (errorData?.message === "No Applicant Found") {
-          toast.warning("No applicant found for this job!");
-          return;
-        }
-        throw new Error("Failed to download the resume.");
-      }
-
-      const blob = await response.blob();
-
-      if (blob.size === 0) {
-        console.error("Empty file received.");
+      if (!response || !response.data || response.data.size === 0) {
         toast.error("Received an empty file.");
         return;
       }
 
-      const blobUrl = window.URL.createObjectURL(blob);
+      const blobUrl = window.URL.createObjectURL(response.data);
 
       const link = document.createElement("a");
       link.href = blobUrl;
@@ -351,24 +330,32 @@ const AdminDashbord = () => {
       // Ensure fetchAppliedList runs after download completion
       await fetchAppliedList(selectedJob?.id);
     } catch (error) {
-      console.error("Error downloading resume:", error);
-      toast.error("Failed to download the resume.");
+      const msg =
+        error.response?.data?.message === "No Applicant Found"
+          ? "No applicant found for this job!"
+          : "Failed to download the resume.";
+
+      toast.error(msg);
     }
   };
 
-
   return (
-        <div>
+    <div>
       <ConfirmationModal
         open={approveOpen}
         handleClose={handleClose}
         data={approveOpen.data}
         handleConfirm={handleStatusChange}
-        message={`Are you sure you want to ${approveOpen?.data?.status?.toLowerCase() || ""} this Applicants?`}
+        message={`Are you sure you want to ${
+          approveOpen?.data?.status?.toLowerCase() || ""
+        } this Applicants?`}
       />
       <ImageHeader
-        title="Admin Dashboard"
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "Admin Dashboard" }]}
+        title="Admin Post"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Admin Post" },
+        ]}
       />
       <JobPost
         open={open}
@@ -402,9 +389,10 @@ const AdminDashbord = () => {
                         gap: "10px",
                         padding: "10px",
                         height: "90px",
+                        width: '100%'
                       }}
                     >
-                      <div className="th-btn" onClick={handleFormOpen}>
+                      <div className="th-btn btn btn-outline-success" onClick={handleFormOpen}>
                         Add New Opening
                       </div>
                     </Grid>
@@ -466,4 +454,4 @@ const AdminDashbord = () => {
   );
 };
 
-export default AdminDashbord;
+export default AdminPost;

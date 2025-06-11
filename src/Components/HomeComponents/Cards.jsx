@@ -25,7 +25,7 @@ const cardsData = [
   {
     img: card3,
     icon: "assets/img/service/icon/3.png",
-    title: "Calf Starter Feed",
+    title: "Calf Starter Feed in",
     description:
       "Specially formulated feed for calves to ensure proper growth and development.",
     number: "03",
@@ -35,7 +35,7 @@ const cardsData = [
 const Cards = () => {
   return (
     <>
-      <section className="bd-serrvice__area service__bg pt-50 pb-30">
+      <section className="bd-serrvice__area service__bg mb-30">
         <div className="container">
           <div className="row">
             {cardsData.map((card, index) => (
@@ -46,15 +46,34 @@ const Cards = () => {
                       src={card.img}
                       alt="service-thumb"
                       style={{
-                        borderTopLeftRadius: "6px",
-                        borderTopRightRadius: "6px",
+                        borderTopLeftRadius: "14px",
+                        borderTopRightRadius: "14px",
                       }}
                     />
                   </div>
-                  <div className="bd-service__content-2 transition-3">
+                  <div
+                    className="bd-service__content-2 transition-3"
+                    style={{
+                      borderBottomLeftRadius: "14px",
+                      borderBottomRightRadius: "14px",
+                    }}
+                  >
                     <h3>
-                      <Link to="/">{card.title}</Link>
+                      <Link
+                        to="/"
+                        style={{
+                          fontSize:
+                            window.innerWidth <= 480
+                              ? "30px"
+                              : window.innerWidth <= 768
+                              ? "18px"
+                              : "24px",
+                        }}
+                      >
+                        {card.title}
+                      </Link>
                     </h3>
+
                     <Link className="bd-link__btn-2" to="/">
                       View Details
                     </Link>
@@ -65,7 +84,13 @@ const Cards = () => {
                     </div>
                   </div>
                   <div className="bd-service__hover transition-3">
-                    <div className="bd-service__overlay">
+                    <div
+                      className="bd-service__overlay"
+                      style={{
+                        borderBottomLeftRadius: "14px",
+                        borderBottomRightRadius: "14px",
+                      }}
+                    >
                       <div className="bd-service__icon">
                         <span>
                           <img src={card.icon} alt="service-icon" />

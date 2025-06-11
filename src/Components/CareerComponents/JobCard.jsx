@@ -86,7 +86,7 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
               >
                 <Box
                   sx={{
-                    bgcolor: "#08A440",
+                    bgcolor: "#5b8c51",
                     width: 48,
                     height: 48,
                     borderRadius: 2,
@@ -180,7 +180,7 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
                   label={job.JobType || "Full-Time"}
                   size="small"
                   sx={{
-                    bgcolor: "#08A440",
+                    bgcolor: "#5b8c51",
                     color: "#fff",
                     fontWeight: 500,
                     borderRadius: "16px",
@@ -191,7 +191,7 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
                   label={job.JobExperience || "Experience Required"}
                   size="small"
                   sx={{
-                    bgcolor: "#08A440",
+                    bgcolor: "#5b8c51",
                     color: "#fff",
                     fontWeight: 500,
                     borderRadius: "16px",
@@ -202,7 +202,7 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
                   label={job.JobId || "Job Id"}
                   size="small"
                   sx={{
-                    bgcolor: "#08A440",
+                    bgcolor: "#5b8c51",
                     color: "#fff",
                     fontWeight: 500,
                     borderRadius: "16px",

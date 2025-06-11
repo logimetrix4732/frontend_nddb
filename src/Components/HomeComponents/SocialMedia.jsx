@@ -3,11 +3,23 @@ import React, { useEffect, useRef, useState } from "react";
 import bgImage from "../../Images/socialbg.jpg";
 
 const icons = [
-  { class: "ri-youtube-fill", url: "https://www.youtube.com/@nddbdairyservices6754", color: "#FF0000" },
-  { class: "ri-linkedin-fill", url: "https://www.linkedin.com/company/nddb-dairy-services/", color: "#0077B5" },
+  {
+    class: "ri-youtube-fill",
+    url: "https://www.youtube.com/@nddbdairyservices6754",
+    color: "#FF0000",
+  },
+  {
+    class: "ri-linkedin-fill",
+    url: "https://www.linkedin.com/company/nddb-dairy-services/",
+    color: "#0077B5",
+  },
   { class: "ri-twitter-line", url: "https://twitter.com", color: "#1DA1F2" },
   { class: "ri-facebook-fill", url: "https://facebook.com", color: "#1877F2" },
-  { class: "ri-instagram-line", url: "https://instagram.com", color: "#E1306C" },
+  {
+    class: "ri-instagram-line",
+    url: "https://instagram.com",
+    color: "#E1306C",
+  },
 ];
 
 const SocialMedia = () => {
@@ -162,7 +174,9 @@ const SocialMedia = () => {
             cursor: "default",
             transition: "all 0.4s ease",
             transform: isOpen ? "scale(1.1)" : "scale(1)",
-            animation: isOpen ? "bounce 0.6s ease" : "pulse 2s infinite ease-in-out",
+            animation: isOpen
+              ? "bounce 0.6s ease"
+              : "pulse 2s infinite ease-in-out",
             zIndex: 20,
           }}
         >

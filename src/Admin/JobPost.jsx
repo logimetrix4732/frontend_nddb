@@ -41,7 +41,7 @@ const JobPost = ({
       onClose={onClose}
       sx={{
         "& .MuiDrawer-paper": {
-          width: { xs: "90%", sm: "70%", md: "40%", lg: "20%" },
+          width: { xs: "90%", sm: "70%", md: "50%", lg: "25%" },
           height: { xs: "auto", md: "100%" },
           maxHeight: { xs: "80vh", md: "100%" },
           boxShadow: 4,
@@ -74,7 +74,7 @@ const JobPost = ({
         </IconButton>
       </Box>
       <DialogContent sx={{ overflowY: "auto" }}>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className="pl-5">
           <Grid item xs={12}>
             <label>Job Name</label>
             <TextField
@@ -85,6 +85,7 @@ const JobPost = ({
               onChange={handleChange}
               error={!!errors.JobName}
               helperText={errors.JobName}
+              placeholder="HR Manager"
             />
           </Grid>
           <Grid item xs={6}>
@@ -97,6 +98,7 @@ const JobPost = ({
               onChange={handleChange}
               error={!!errors.JobExperience}
               helperText={errors.JobExperience}
+              placeholder="4 year"
             />
           </Grid>
           <Grid item xs={6}>
@@ -109,6 +111,7 @@ const JobPost = ({
               onChange={handleChange}
               error={!!errors.SalaryRange}
               helperText={errors.SalaryRange}
+              placeholder="5-7LPA"
             />
           </Grid>
           <Grid item xs={6}>
@@ -151,6 +154,7 @@ const JobPost = ({
               onChange={handleChange}
               error={!!errors.JobLocation}
               helperText={errors.JobLocation}
+              placeholder="Pune"
             />
           </Grid>
           <Grid item xs={12}>
@@ -164,6 +168,7 @@ const JobPost = ({
               onChange={handleChange}
               error={!!errors.JobDescription}
               helperText={errors.JobDescription}
+              placeholder="We are hiring for HR Manager..."
             />
           </Grid>
           <Grid item xs={12}>

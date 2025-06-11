@@ -106,7 +106,7 @@ const CarrerForm = ({
         transitionDuration={300}
         sx={{
           "& .MuiDrawer-paper": {
-            width: { xs: "90%", sm: "80%", md: "40%", lg: "30%" },
+            width: { xs: "90%", sm: "80%", md: "40%", lg: "25%" },
             height: { xs: "auto", md: "100%" },
             maxHeight: { xs: "80vh", md: "100%" },
             boxShadow: 4,

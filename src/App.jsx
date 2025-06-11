@@ -1,7 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-import AllHome from "./Components/AllHome/AllHome";
-import AllHome1 from "./Components/AllHome/AllHome1";
-import AllHome2 from "./Components/AllHome/AllHome2";
+import { useEffect, useRef } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
 import PageNotFound from "./Pages/PageNotFound";
 import MainLayout from "./Components/Layout/MainLayout";
@@ -16,21 +14,28 @@ import NewInitiative from "./Pages/NewInitiative";
 import Publications from "./Pages/Publications";
 import Tenders from "./Pages/Tenders";
 import LoginPage from "./Pages/AdminLogin";
-import AdminDashbord from "./Admin/AdminDashbord";
 
+import AdminPost from "./Admin/AdminPost";
+import AdminDashboard from "./Admin/AdminDashboard";
+import RequireAuth from "./Auth/RequireAuth";
 
 function App() {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    const isFirstLoad = useRef(true);
+
+    useEffect(() => {
+      if (isFirstLoad.current) {
+        isFirstLoad.current = false;
+        return;
+      }
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  };
 
   return (
-
-    // <Routes element={<MainLayout />}>
-    //   <Route path="/" element={<Home />} />
-    //   <Route path="/home" element={<AllHome1 />} />
-    //   <Route path="/home1" element={<AllHome2 />} />
-    //   <Route path="/home2" element={<AllHome />} />
-    //   <Route path="*" element={<PageNotFound />} />
-    // </Routes>
-
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
@@ -46,11 +51,26 @@ function App() {
         <Route path="/publications" element={<Publications />} />
         <Route path="/tenders" element={<Tenders />} />
         <Route path="/adminlogin" element={<LoginPage />} />
-        <Route path="/adminDashboard" element={<AdminDashbord />} />
+        <Route
+          path="/adminPost"
+          element={
+            <RequireAuth>
+              <AdminPost />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/adminDashboard"
+          element={
+            <RequireAuth>
+              <AdminDashboard />
+            </RequireAuth>
+          }
+        />
+
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
-    
   );
 }
 

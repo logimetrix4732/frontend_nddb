@@ -36,12 +36,7 @@ const SuccessStories = () => {
   };
 
   return (
-    <section
-      className="container-fluid px-3 position-relative mb-50"
-      style={{
-        overflowX: window.innerWidth < 768 ? "none" : "hidden",
-      }}
-    >
+    <section className="container-fluid px-3 position-relative mb-50">
       {/* Cow Image - Background Layer */}
       <div
         className="position-absolute bottom-0 end-0 d-none d-md-block"
@@ -92,36 +87,36 @@ const SuccessStories = () => {
             style={{ minHeight: "450px" }}
           >
             <h2 className="bd-section__title">Success Stories</h2>
-            <p className="bd-section__paragraph  mt-2">
+            <p className="bd-section__paragraph mt-3">
               Real-life transformations and impacts achieved through our
               initiatives and partnerships are at the heart of our mission to
               empower rural communities.
             </p>
 
             <ul
-              className="bd-section__paragraph mt-2 ps-3"
+              className="text-secondary mt-3 ps-3"
               style={{ listStyle: "none" }}
             >
-              <li className="mb-2">
+              <li className="mb-2 bd-section__paragraph">
                 <i className="ri-checkbox-circle-line text-success me-2"></i>
                 Over 50,000 farmers impacted through sustainable dairy programs.
               </li>
-              <li className="mb-2">
+              <li className="mb-2 bd-section__paragraph">
                 <i className="ri-checkbox-circle-line text-success me-2"></i>
                 3x increase in household income in supported regions.
               </li>
-              <li className="mb-2">
+              <li className="mb-2 bd-section__paragraph">
                 <i className="ri-checkbox-circle-line text-success me-2"></i>
                 Women-led dairy cooperatives are driving socio-economic change.
               </li>
             </ul>
 
-            <Slider {...settings} className="mt-2">
+            <Slider {...settings} className="mt-3">
               {stories.map((story, index) => (
                 <div key={index} className="mt-2">
                   <div className="border-start border-4 ps-3 border-success">
-                    <h5 className="fw-bold mt-2">{story.title}</h5>
-                    <p className="text-secondary mb-0 mt-2">
+                    <h5 className="fw-bold mt-2  fs-2">{story.title}</h5>
+                    <p className="bd-section__paragraph mb-0 mt-2">
                       {story.description}
                     </p>
                   </div>
