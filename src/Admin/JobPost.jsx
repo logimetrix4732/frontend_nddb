@@ -73,7 +73,7 @@ const JobPost = ({
           <CloseIcon />
         </IconButton>
       </Box>
-      <DialogContent sx={{ overflowY: "auto" }}>
+      <DialogContent sx={{ overflowY: "auto" }} >
         <Grid container spacing={2} className="pl-5">
           <Grid item xs={12}>
             <label>Job Name</label>
@@ -198,7 +198,7 @@ const JobPost = ({
             fontWeight: "bold",
             p: 1.5,
             borderRadius: "10px",
-            backgroundColor: "#4786e6",
+            backgroundColor: "#5b8c51",
           }}
           disabled={loading}
           onClick={() => {
