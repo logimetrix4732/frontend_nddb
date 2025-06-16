@@ -54,7 +54,7 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
             sx={{
               className: "col-md-3",
               width: "100%",
-              height: '350px',
+              // height: '350px',
               transition: "all 0.3s ease",
               transform:
                 hoveredIndex === index ? "translateY(-5px)" : "translateY(0)",
@@ -161,8 +161,8 @@ const JobCard = ({ handleCardClick, jobData = [], admin, handleEditJob }) => {
                   wordWrap: "break-word",
                   overflowWrap: "break-word",
                   whiteSpace: "normal",
-                  width: '300px',
-                  height: '80px',
+                  width: '290px',
+                  height: '100px',
                 }}
               >
                 {job.JobDescription || "No description available."}

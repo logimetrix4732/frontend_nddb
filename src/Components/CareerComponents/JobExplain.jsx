@@ -124,7 +124,9 @@ const JobExplain = ({
             color: "#6c757d",
             letterSpacing: "0.5px",
           }}
+          style={{width: '55vw'}}
         >
+          
           {selectedJob.JobDescription}
         </Typography>
         <Typography variant="h6" fontWeight={500} sx={{ mt: 2, mb: 0.4 }}>

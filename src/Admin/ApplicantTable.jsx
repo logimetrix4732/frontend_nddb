@@ -166,8 +166,8 @@ export default function ApplicantTable({
               })}
               {!filteredRows.length && (
                 <TableRow>
-                  <TableCell colSpan={6} align="center">
-                    No data available
+                  <TableCell colSpan={9} align="center">
+                    <p className="py-2">No data available</p>
                   </TableCell>
                 </TableRow>
               )}
